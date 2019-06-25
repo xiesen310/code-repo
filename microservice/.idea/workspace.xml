@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="02acdb31-6202-4170-8a66-b3bea106121e" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="02acdb31-6202-4170-8a66-b3bea106121e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/producer-user/pom.xml" afterDir="false" />
+    </list>
+>>>>>>> microservice
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/producer-user/target/" />
@@ -88,7 +94,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+=======
+>>>>>>> microservice
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -117,12 +126,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561418125481</updated>
+<<<<<<< HEAD
       <workItem from="1561418131791" duration="1755000" />
+=======
+      <workItem from="1561418131791" duration="1246000" />
+>>>>>>> microservice
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1755000" />
+=======
+    <option name="totallyTimeSpent" value="1246000" />
+>>>>>>> microservice
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -144,7 +161,11 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.4495114" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4495114" />
+>>>>>>> microservice
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
