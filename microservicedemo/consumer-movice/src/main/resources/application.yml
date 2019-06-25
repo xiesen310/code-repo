@@ -1,0 +1,9 @@
+server:
+  port: 8900
+
+spring:
+  application:
+    name: consumer-movice
+
+user:
+  url: http://localhost:7900/user/

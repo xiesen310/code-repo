@@ -6,12 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="consumer-movice" />
         <module name="producer-user" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="microservice" target="1.8" />
-      <module name="producer-user" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

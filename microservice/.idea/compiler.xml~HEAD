@@ -9,9 +9,5 @@
         <module name="producer-user" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="microservice" target="1.8" />
-      <module name="producer-user" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
