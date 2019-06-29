@@ -7,8 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="consumer-movice" />
+        <module name="eureka-servers" />
         <module name="producer-user" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-server" target="1.8" />
+      <module name="eurekaServer" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

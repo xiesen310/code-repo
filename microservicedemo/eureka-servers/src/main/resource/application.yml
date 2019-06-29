@@ -1,0 +1,17 @@
+server:
+  port: 10000
+# 因为当前的 eureka 是单机的， 所以我们需要一些配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      # defaultZone: http://localhost:10000/eureka
+      defaultZone: http://user:123@localhost:10000/eureka
+
+security:
+  basic:
+    enabled: true # 开启安全配置，也就是需要密码，如果不需要设置为 false 即可, 注意这个参数必须放在application.yml 文件中,不允许放到 bootstrap.yml 文件中
+  user:
+    name: user
+    password: 123 # 在配置了用户名和密码后，我们可以修改地址的访问风格为 curl 风格

@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: producer-user
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:10000/eureka

@@ -1,5 +1,7 @@
 package com.xiesen.micro.controller;
 
+import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.EurekaClient;
 import com.xiesen.micro.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,12 +16,17 @@ public class MoviceController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private EurekaClient eurekaClient;
 
     @Value("${user.url}")
     private String url;
 
     @GetMapping("/movice/{id}")
     public User getUser(@PathVariable Long id) {
-        return restTemplate.getForObject(url + id, User.class);
+        // 访问提供者，获取数据
+        InstanceInfo instanceInfo = eurekaClient.getNextServerFromEureka("PRODUCER-USER", false);
+        String pageUrl = instanceInfo.getHomePageUrl();
+        return restTemplate.getForObject(pageUrl + "/user/" + id, User.class);
     }
 }
