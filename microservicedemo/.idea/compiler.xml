@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="consumer-movice-ribbon-config-properties" />
         <module name="consumer-movice" />
-        <module name="consumer-movice-ribbon" />
         <module name="consumer-movice-ribbon-config" />
         <module name="eureka-servers" />
+        <module name="consumer-movice-ribbon" />
         <module name="producer-user" />
       </profile>
     </annotationProcessing>
