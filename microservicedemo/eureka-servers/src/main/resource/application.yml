@@ -8,6 +8,8 @@ eureka:
     service-url:
       # defaultZone: http://localhost:10000/eureka
       defaultZone: http://user:123@localhost:10000/eureka
+  instance:
+    prefer-ip-address: true
 
 security:
   basic:

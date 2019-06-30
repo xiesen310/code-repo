@@ -1,0 +1,16 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: consumer-movice-ribbon
+
+user:
+  url: http://localhost:7900/user/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:10000/eureka
+  instance:
+    prefer-ip-address: true # 在 eureka 中显示 ip
