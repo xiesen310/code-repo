@@ -6,7 +6,9 @@
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon-config-properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-ha" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-servers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-servers-ha" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/producer-user" charset="UTF-8" />
   </component>
 </project>

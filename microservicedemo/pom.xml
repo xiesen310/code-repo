@@ -16,6 +16,7 @@
     <module>consumer-movice-ribbon</module>
     <module>consumer-movice-ribbon-config</module>
     <module>consumer-movice-ribbon-config-properties</module>
+      <module>eureka-ha</module>
   </modules>
 
   <name>microservicedemo</name>

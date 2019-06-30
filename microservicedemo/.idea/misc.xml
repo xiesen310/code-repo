@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/comsumer-order-ribbon/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-servers-ha/pom.xml" />
         <option value="$PROJECT_DIR$/eurekaServer/pom.xml" />
       </set>
     </option>
