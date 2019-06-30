@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-movice-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-movice-ribbon-config-properties" charset="UTF-8" />

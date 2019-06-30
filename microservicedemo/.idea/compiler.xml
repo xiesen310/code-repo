@@ -10,6 +10,7 @@
         <module name="eureka-ha" />
         <module name="consumer-movice" />
         <module name="consumer-movice-ribbon-config" />
+        <module name="consumer-movice-feign" />
         <module name="producer-user" />
         <module name="eureka-servers" />
         <module name="consumer-movice-ribbon" />
