@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>consumer-movice-feign</artifactId>
+    <artifactId>consumer-movice-feign-custom</artifactId>
 
-    <name>consumer-movice-feign</name>
+    <name>consumer-movice-feign-custom</name>
     <url>http://www.example.com</url>
 
     <properties>
@@ -27,7 +27,6 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -50,7 +49,6 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>1.4.3.RELEASE</version>
         </dependency>
-
     </dependencies>
 
 </project>
