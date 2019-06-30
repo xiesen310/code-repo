@@ -12,3 +12,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://user:123@localhost:10000/eureka
+
+logging:
+  level:
+    com.xiesen.micro.feign.FeignClient02: debug  # 给指定的 feign 设置日志输出级别，只有在 debug  的情况下才会打印日志

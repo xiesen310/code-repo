@@ -1,6 +1,7 @@
 package com.xiesen.micro.controller;
 
 import com.xiesen.micro.feign.FeignClient01;
+import com.xiesen.micro.feign.FeignClient02;
 import com.xiesen.micro.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,8 @@ public class UserController {
 
     @Autowired
     private FeignClient01 feignClient01;
+    @Autowired
+    private FeignClient02 feignClient02;
 
     @GetMapping("/user/{id}")
     public User getUser(@PathVariable Long id) {
@@ -26,5 +29,10 @@ public class UserController {
     public User getUser(User user) {
         User user1 = feignClient01.getUser(user);
         return user1;
+    }
+
+    @GetMapping("/serviceinfo/{name}")
+    public String getServiceInfo(@PathVariable String name){
+        return feignClient02.getServiceInfo(name);
     }
 }
