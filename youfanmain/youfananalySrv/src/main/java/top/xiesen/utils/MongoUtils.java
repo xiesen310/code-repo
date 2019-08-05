@@ -15,7 +15,7 @@ import org.bson.types.ObjectId;
  * @Date 2019/7/29 16:10
  */
 public class MongoUtils {
-    private static MongoClient mongoClient = new MongoClient("192.168.231.147",27017);
+    private static MongoClient mongoClient = new MongoClient("192.168.231.150",27017);
 
     /**
      * mongodb 查询

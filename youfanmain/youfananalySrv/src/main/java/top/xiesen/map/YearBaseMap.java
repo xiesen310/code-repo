@@ -14,7 +14,6 @@ import top.xiesen.utils.HbaseUtils;
 public class YearBaseMap implements MapFunction<String, YearBase> {
     @Override
     public YearBase map(String s) throws Exception {
-        System.out.println("YearBaseMap: " + s);
         if (StringUtils.isBlank(s)) {
             return null;
         }

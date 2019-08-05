@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * @Description 年代标签
  * 年代: 40年代、50年代、60年代、70年代、80年代、90年代、00年代、10年代
- * 统计每个年代群里的数量，做到近实时统计，没半个小时进行一次任务统计
+ * 统计每个年代群里的数量，做到近实时统计，每半个小时进行一次任务统计
  * @Author 谢森
  * @Date 2019/7/28 19:25
  */
@@ -46,7 +46,8 @@ public class YearBaseTask {
                     document.put("count", total);
                 }
                 MongoUtils.saveorupdatemongo("yearbasestatics", "youfanPortrait", document);
-                env.execute("year base");
+
+                env.execute();
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -23,9 +23,9 @@ public class HbaseUtils {
     static {
         // 创建hbase配置对象
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.rootdir", "hdfs://192.168.231.147:9000/hbase");
+        conf.set("hbase.rootdir", "hdfs://192.168.231.150:9000/hbase");
         //使用eclipse时必须添加这个，否则无法定位
-        conf.set("hbase.zookeeper.quorum", "192.168.231.147");
+        conf.set("hbase.zookeeper.quorum", "192.168.231.150");
         conf.set("hbase.client.scanner.timeout.period", "600000");
         conf.set("hbase.rpc.timeout", "600000");
         try {
