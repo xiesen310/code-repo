@@ -1,6 +1,7 @@
 package top.xiesen.utils;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -39,5 +40,32 @@ public class DateUtils {
             yearBaseType = "10后";
         }
         return yearBaseType;
+    }
+
+    /**
+     * 计算购买的频率
+     * @param startTime
+     * @param endTime
+     * @param dateFormatString
+     * @return
+     * @throws ParseException
+     */
+    public static int getBetweenByStartAndEnd(String startTime,String endTime,String dateFormatString) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatString);
+        Date start = dateFormat.parse(startTime);
+        Date end = dateFormat.parse(endTime);
+
+        Calendar startCalendar = Calendar.getInstance();
+        Calendar endCalendar = Calendar.getInstance();
+        startCalendar.setTime(start);
+        endCalendar.setTime(end);
+
+        int days = 0;
+
+        while (startCalendar.before(endCalendar)) {
+            startCalendar.add(Calendar.DAY_OF_YEAR,1);
+            days += 1;
+        }
+        return days;
     }
 }
