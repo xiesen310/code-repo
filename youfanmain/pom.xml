@@ -10,6 +10,8 @@
   <version>1.0.0</version>
   <modules>
     <module>youfananalySrv</module>
+      <module>youfanRegisterCenter</module>
+    <module>youfanInfoInService</module>
   </modules>
 
   <name>youfanmain</name>
