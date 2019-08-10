@@ -16,6 +16,15 @@ public class BuyCartLog implements Serializable {
     private int userId; // 用户id
     private int userType; // 终端类型:0、pc端；1、移动端；2、小程序
     private String userIp; // 用户ip
+    private String brand; //  品牌
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 
     public int getProductId() {
         return productId;

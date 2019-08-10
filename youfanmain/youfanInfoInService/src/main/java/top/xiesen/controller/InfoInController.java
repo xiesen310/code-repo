@@ -15,6 +15,7 @@ import top.xiesen.log.ScanProductLog;
 import top.xiesen.utils.ReadProperties;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 /**
  * @Description InfoInController
@@ -30,7 +31,7 @@ public class InfoInController {
     private final String scanProductLogTopic = ReadProperties.getKey("scanProductLog");
 
     @Autowired
-    private KafkaTemplate<String,String> kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @RequestMapping(value = "helloword", method = RequestMethod.GET)
     public String helloword(HttpServletRequest req) {
@@ -64,19 +65,19 @@ public class InfoInController {
         if ("AttentionProductLog".equals(classname)) {
             AttentionProductLog attentionProductLog = JSONObject.parseObject(data, AttentionProductLog.class);
             resultMsg = JSONObject.toJSONString(attentionProductLog);
-            kafkaTemplate.send(attentionProductLogTopic,resultMsg);
+            kafkaTemplate.send(attentionProductLogTopic, resultMsg + "##1##" + new Date().getTime());
         } else if ("BuyCartLog".equals(classname)) {
             BuyCartLog buyCartLog = JSONObject.parseObject(data, BuyCartLog.class);
             resultMsg = JSONObject.toJSONString(buyCartLog);
-            kafkaTemplate.send(buyCartLogTopic,resultMsg);
+            kafkaTemplate.send(buyCartLogTopic, resultMsg + "##1##" + new Date().getTime());
         } else if ("CollectionProductLog".equals(classname)) {
             CollectionProductLog collectionProductLog = JSONObject.parseObject(data, CollectionProductLog.class);
             resultMsg = JSONObject.toJSONString(collectionProductLog);
-            kafkaTemplate.send(collectionProductLogTopic,resultMsg);
+            kafkaTemplate.send(collectionProductLogTopic, resultMsg + "##1##" + new Date().getTime());
         } else if ("ScanProductLog".equals(classname)) {
             ScanProductLog scanProductLog = JSONObject.parseObject(data, ScanProductLog.class);
             resultMsg = JSONObject.toJSONString(scanProductLog);
-            kafkaTemplate.send(scanProductLogTopic,resultMsg);
+            kafkaTemplate.send(scanProductLogTopic, resultMsg + "##1##" + new Date().getTime());
         }
 
         ResultMessage resultMessage = new ResultMessage();
