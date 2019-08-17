@@ -52,6 +52,22 @@ public class MybatisTest {
         }
     }
 
+    /**
+     * 1. 接口式编程
+     *    原生:     Dao ===> DaoImpl
+     *    mybatis: Mapper ==> xxMapper.xml
+     * 2. SqlSession 代表和数据库的一次会话，用完必须关闭
+     * 3. SqlSession 和 Connection 是一样的，都是非线程安全的，每次使用都应该获取新的对象，不能放到共享成员变量中
+     * 4. mapper 接口没有实现类，但是 Mybatis 会为接口生产一个代理对象
+     *      (将接口和 xml 进行绑定)
+     *      EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class)
+     * 5. 两个重要配置文件
+     *      1. mybatis 的全局配置文件: 包含数据库链接池信息，事务管理器信息等等...
+     *      2. sql 映射文件: 保存了每一个 sql 语句的映射信息:
+     *          将 sql 语句抽取出来
+     *
+     * @throws IOException
+     */
     @Test
     public void test01() throws IOException {
         // 1. 获取 sqlSessionFactory 对象
