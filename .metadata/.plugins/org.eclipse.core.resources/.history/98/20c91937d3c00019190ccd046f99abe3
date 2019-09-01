@@ -1,0 +1,6 @@
+package top.xiesen.mybatis.bean;
+
+public class Employee {
+	private Integer id;
+	
+}

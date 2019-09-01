@@ -1,0 +1,5 @@
+package top.xiesen.mybatis.bean;
+
+public class Employee {
+
+}
