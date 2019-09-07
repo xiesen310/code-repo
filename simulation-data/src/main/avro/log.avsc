@@ -1,0 +1,50 @@
+{
+    "namespace":"top.xiesen.schema",
+    "type": "record",
+    "name": "LogAvroBean",
+    "fields": [
+        {
+            "name": "logTypeName",
+            "type": "string"
+        },
+        {
+            "name": "timestamp",
+            "type": "string"
+        },
+        {
+            "name": "source",
+            "type": "string"
+        },
+        {
+            "name": "offset",
+            "type": "string"
+        },
+        {
+            "name": "dimensions",
+            "type":
+                {
+                    "type": "map",
+                    "values": "string"
+                }
+
+        },
+        {
+            "name": "measures",
+            "type":
+                {
+                    "type": "map",
+                    "values": "double"
+                }
+
+        },
+        {
+            "name": "normalFields",
+            "type":
+                {
+                    "type": "map",
+                    "values": "string"
+                }
+
+        }
+    ]
+}
