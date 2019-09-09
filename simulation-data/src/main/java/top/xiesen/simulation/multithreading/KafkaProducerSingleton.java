@@ -80,8 +80,7 @@ public class KafkaProducerSingleton {
          * 3、如果没有指定分区和key,那么将会随机发送到topic的分区中
          * 4、如果指定了key,那么将会以hash<key>的方式发送到分区中
          */
-        ProducerRecord<String, String> record = new ProducerRecord<String, String>(
-                topic, random.nextInt(3), "", message);
+        ProducerRecord<String, String> record = new ProducerRecord<String, String>(topic, random.nextInt(8), null, message);
         // send方法是异步的,添加消息到缓存区等待发送,并立即返回，这使生产者通过批量发送消息来提高效率
         // kafka生产者是线程安全的,可以单实例发送消息
         kafkaProducer.send(record, new Callback() {

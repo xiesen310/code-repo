@@ -9,18 +9,17 @@ import java.util.concurrent.Executors;
 
 public class TestKafka {
     public void testSendMessageSingleton() throws InterruptedException {
-        ExecutorService executor = Executors.newFixedThreadPool(20);
+        ExecutorService executor = Executors.newFixedThreadPool(10);
         Random random = new Random();
-        for (int i = 1; i <= 100000; i++) {
-            User user = new User();
-            int randint = (int) Math.floor((random.nextDouble() * 100000.0)) + 1; // 1 - 100000
-            user.setUserId(i);
-            user.setTimestamps(String.valueOf(System.currentTimeMillis()));
-            user.setFuncId(randint);
-            String msg = JSONObject.toJSON(user).toString();
-//            Thread.sleep(1000);
-            executor.submit(new HandlerProducer("xiesen2",msg));
-        }
+            for (int i = 1; i <= 1000000; i++) {
+                User user = new User();
+                int randint = (int) Math.floor((random.nextDouble() * 100000.0)) + 1; // 1 - 100000
+                user.setUserId(i);
+                user.setTimestamps(String.valueOf(System.currentTimeMillis()));
+                user.setFuncId(randint);
+                String msg = JSONObject.toJSON(user).toString();
+                executor.submit(new HandlerProducer("xiesen5", msg));
+            }
     }
 
     public static void main(String[] args) throws InterruptedException {
