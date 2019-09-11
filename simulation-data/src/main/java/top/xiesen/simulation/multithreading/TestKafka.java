@@ -11,6 +11,7 @@ public class TestKafka {
     public void testSendMessageSingleton() throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Random random = new Random();
+        for (int j = 0; j < 5; j++) {
             for (int i = 1; i <= 1000000; i++) {
                 User user = new User();
                 int randint = (int) Math.floor((random.nextDouble() * 100000.0)) + 1; // 1 - 100000
@@ -18,8 +19,10 @@ public class TestKafka {
                 user.setTimestamps(String.valueOf(System.currentTimeMillis()));
                 user.setFuncId(randint);
                 String msg = JSONObject.toJSON(user).toString();
-                executor.submit(new HandlerProducer("xiesen5", msg));
+                executor.submit(new HandlerProducer("test1", msg));
             }
+            Thread.sleep(10000);
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
