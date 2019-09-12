@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.xiesen.rock.admin.dao.UserMapper">
+
+    <resultMap id="BaseResultMap" type="top.xiesen.rock.admin.model.User">
+        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="dept_id" property="deptId" jdbcType="INTEGER"/>
+        <result column="login_name" property="loginName" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
+        <result column="avatar" property="avatar" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="login_date" property="loginDate" jdbcType="INTEGER"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    user_id, dept_id, login_name, user_name, email,phone_number,sex,avatar,password,login_date,remark
+  </sql>
+
+    <select id="selectUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_user
+        where user_id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteUserById" parameterType="java.lang.Integer">
+        DELETE FROM tb_user
+        WHERE user_id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteUserByIds" parameterType="java.lang.Integer">
+        DELETE FROM tb_user WHERE user_id in
+        <foreach collection="array" item="userId" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_user
+    </select>
+
+    <update id="updateUser" parameterType="top.xiesen.rock.admin.model.User">
+        update tb_user
+        <set>
+            <if test="deptId != null and deptId != 0">dept_id = #{deptId},</if>
+            <if test="loginName != null and loginName != ''">login_name = #{loginName},</if>
+            <if test="userName != null and userName != ''">user_name = #{userName},</if>
+            <if test="email != null and email != ''">email = #{email},</if>
+            <if test="phonenumber != null and phonenumber != ''">phonenumber = #{phoneNumber},</if>
+            <if test="sex != null and sex != ''">sex = #{sex},</if>
+            <if test="avatar != null and avatar != ''">avatar = #{avatar},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="loginDate != null">login_date = #{loginDate},</if>
+            <if test="remark != null">remark = #{remark}</if>
+        </set>
+        where user_id = #{userId}
+    </update>
+
+    <insert id="insertUser" parameterType="top.xiesen.rock.admin.model.User" useGeneratedKeys="true"
+            keyProperty="userId">
+        insert into tb_user(
+        <if test="userId != null and userId != 0">user_id,</if>
+        <if test="deptId != null and deptId != 0">dept_id,</if>
+        <if test="loginName != null and loginName != ''">login_name,</if>
+        <if test="userName != null and userName != ''">user_name,</if>
+        <if test="email != null and email != ''">email,</if>
+        <if test="avatar != null and avatar != ''">avatar,</if>
+        <if test="phonenumber != null and phonenumber != ''">phonenumber,</if>
+        <if test="sex != null and sex != ''">sex,</if>
+        <if test="password != null and password != ''">password,</if>
+        <if test="remark != null and remark != ''">remark</if>
+        )values(
+        <if test="userId != null and userId != ''">#{userId},</if>
+        <if test="deptId != null and deptId != ''">#{deptId},</if>
+        <if test="loginName != null and loginName != ''">#{loginName},</if>
+        <if test="userName != null and userName != ''">#{userName},</if>
+        <if test="email != null and email != ''">#{email},</if>
+        <if test="avatar != null and avatar != ''">#{avatar},</if>
+        <if test="phonenumber != null and phonenumber != ''">#{phoneNumber},</if>
+        <if test="sex != null and sex != ''">#{sex},</if>
+        <if test="password != null and password != ''">#{password},</if>
+        <if test="remark != null and remark != ''">#{remark}</if>
+        )
+    </insert>
+
+    <select id="selectUserByLoginName" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        where login_name = #{userName}
+    </select>
+
+</mapper>
