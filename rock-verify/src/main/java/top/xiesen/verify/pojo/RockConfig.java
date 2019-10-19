@@ -7,10 +7,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource(value = "classpath:resource.properties", encoding = "UTF-8")
+@PropertySource(value = "classpath:rockConfig.properties", encoding = "UTF-8")
 @Getter
 @Setter
-public class Resource {
+public class RockConfig {
     @Value("${top.xiesen.verify.name}")
     private String name;
 
