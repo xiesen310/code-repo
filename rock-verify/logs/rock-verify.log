@@ -1,0 +1,969 @@
+2019-10-19 12:22:18,120 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:22:18,297 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 32 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:22:18,299 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:22:18,831 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166)] - [WARN] No MyBatis mapper was found in '[top.xiesen.verify]' package. Please check your configuration.
+2019-10-19 12:22:18,858 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166)] - [WARN] No MyBatis mapper was found in '[top.xiesen.verify]' package. Please check your configuration.
+2019-10-19 12:22:19,315 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:22:19,393 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1052 ms
+2019-10-19 12:22:19,549 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:22:19,671 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 12:22:19,708 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-10-19 12:22:19,709 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:22:19,726 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 12:22:19,732 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40)] - [ERROR] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-10-19 12:22:34,477 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:22:34,676 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12368 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:22:34,678 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:22:35,273 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166)] - [WARN] No MyBatis mapper was found in '[top.xiesen.verify]' package. Please check your configuration.
+2019-10-19 12:22:35,297 [main] [org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:166)] - [WARN] No MyBatis mapper was found in '[top.xiesen.verify]' package. Please check your configuration.
+2019-10-19 12:22:35,798 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:22:35,883 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1146 ms
+2019-10-19 12:22:36,057 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:22:36,209 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 12:22:36,255 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-10-19 12:22:36,256 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:22:36,282 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 12:22:36,289 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40)] - [ERROR] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-10-19 12:24:07,812 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:24:07,953 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 9076 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:24:07,953 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:24:08,670 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:24:08,717 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 726 ms
+2019-10-19 12:24:08,828 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:24:08,926 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:24:08,942 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.203 seconds (JVM running for 1.973)
+2019-10-19 12:24:31,050 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:24:31,053 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:31:43,231 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:31:43,365 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 14112 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:31:43,367 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:31:44,090 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:31:44,151 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 742 ms
+2019-10-19 12:31:44,268 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:31:44,398 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:31:44,401 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.253 seconds (JVM running for 2.049)
+2019-10-19 12:31:52,094 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:31:52,098 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 12:32:53,433 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:32:53,568 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 14988 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:32:53,569 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:32:54,280 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:32:54,339 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 729 ms
+2019-10-19 12:32:54,448 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:32:54,560 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:32:54,563 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.239 seconds (JVM running for 2.026)
+2019-10-19 12:33:00,885 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:33:00,888 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:33:51,800 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:33:51,936 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 15932 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:33:51,937 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:33:52,689 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:33:52,748 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 766 ms
+2019-10-19 12:33:52,862 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:33:52,971 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:33:52,972 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.275 seconds (JVM running for 2.103)
+2019-10-19 12:34:13,673 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:34:13,676 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:35:45,215 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:35:45,350 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 6276 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:35:45,352 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:35:46,019 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:35:46,076 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 690 ms
+2019-10-19 12:35:46,184 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:35:46,295 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:35:46,298 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.18 seconds (JVM running for 1.968)
+2019-10-19 12:35:52,410 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:35:52,415 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 5 ms
+2019-10-19 12:37:45,222 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:37:45,380 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 15636 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:37:45,381 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:37:46,080 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:37:46,138 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 714 ms
+2019-10-19 12:37:46,248 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:37:46,370 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:37:46,372 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.25 seconds (JVM running for 2.01)
+2019-10-19 12:37:49,209 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:37:49,212 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:39:08,939 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:39:09,068 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 11284 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:39:09,070 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:39:09,826 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:39:09,884 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 777 ms
+2019-10-19 12:39:10,001 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:39:10,117 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:39:10,120 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.269 seconds (JVM running for 2.052)
+2019-10-19 12:40:40,114 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:40:40,117 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:46:52,938 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:46:53,079 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 5176 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:46:53,079 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:46:53,776 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:46:53,822 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 712 ms
+2019-10-19 12:46:53,916 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:46:54,025 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:46:54,025 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.172 seconds (JVM running for 1.919)
+2019-10-19 12:49:34,490 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:49:34,632 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 2836 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:49:34,632 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:49:35,320 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:49:35,389 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 725 ms
+2019-10-19 12:49:35,514 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:49:35,625 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:49:35,625 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.217 seconds (JVM running for 1.986)
+2019-10-19 12:49:44,573 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:49:44,576 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 12:50:34,489 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:50:34,629 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 8408 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:50:34,645 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:50:35,335 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:50:35,397 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 721 ms
+2019-10-19 12:50:35,506 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:50:35,617 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:50:35,617 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.211 seconds (JVM running for 2.004)
+2019-10-19 12:50:38,728 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:50:38,732 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 12:52:05,606 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:52:05,786 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 11460 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:52:05,786 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:52:06,553 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:52:06,634 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 797 ms
+2019-10-19 12:52:06,748 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:52:06,866 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:52:06,866 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.378 seconds (JVM running for 2.3)
+2019-10-19 12:52:30,263 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:52:30,267 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 12:52:38,187 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:58:21,425 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:58:21,551 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 2232 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:58:21,551 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:58:22,254 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:58:22,316 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 718 ms
+2019-10-19 12:58:22,348 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'resource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'top.xiesen.verify.pojo.Resource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-10-19 12:58:22,363 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 12:58:22,444 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40)] - [ERROR] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field resource in top.xiesen.verify.controller.UserController required a bean of type 'top.xiesen.verify.pojo.Resource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'top.xiesen.verify.pojo.Resource' in your configuration.
+
+2019-10-19 12:59:00,248 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 12:59:00,388 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 9712 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 12:59:00,388 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 12:59:01,071 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 12:59:01,120 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 698 ms
+2019-10-19 12:59:01,229 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 12:59:01,354 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 12:59:01,354 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.196 seconds (JVM running for 1.939)
+2019-10-19 12:59:07,975 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 12:59:07,979 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:00:24,468 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:00:24,624 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 10356 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:00:24,624 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:00:25,327 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:00:25,385 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 730 ms
+2019-10-19 13:00:25,432 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'resource'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resource': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'top' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+2019-10-19 13:00:25,447 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 13:00:25,463 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'resource'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resource': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'top' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resource': Unsatisfied dependency expressed through field 'language'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'top' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 19 more
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'top' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:164)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1566)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 32 more
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'top' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:55)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:91)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:267)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:161)
+	... 36 more
+2019-10-19 13:00:40,073 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:00:40,198 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 15412 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:00:40,198 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:00:40,883 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:00:40,932 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 687 ms
+2019-10-19 13:00:41,057 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:00:41,167 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:00:41,182 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.198 seconds (JVM running for 1.951)
+2019-10-19 13:00:45,445 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:00:45,449 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 13:13:42,707 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:13:42,849 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 6644 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:13:42,850 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:13:43,596 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:13:43,658 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 763 ms
+2019-10-19 13:13:43,782 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:13:43,820 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+2019-10-19 13:13:43,821 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:13:43,839 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 13:13:43,843 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:600)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:350)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	... 16 more
+2019-10-19 13:14:46,726 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:14:46,911 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 8408 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:14:46,911 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:14:47,714 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:14:47,776 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 818 ms
+2019-10-19 13:14:47,901 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:14:47,964 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+2019-10-19 13:14:47,964 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:14:47,979 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 13:14:47,979 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:600)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:350)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	... 16 more
+2019-10-19 13:15:21,642 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:15:21,753 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 5180 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:15:21,769 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:15:22,394 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:15:22,456 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 672 ms
+2019-10-19 13:15:22,566 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:15:22,597 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+2019-10-19 13:15:22,597 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:15:22,615 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 13:15:22,619 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:10)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'basicErrorController' method 
+org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+to { /error}: There is already 'userController' bean method
+top.xiesen.verify.controller.UserController#error() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:600)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:350)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	... 16 more
+2019-10-19 13:16:02,724 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:16:02,849 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 11284 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:16:02,849 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:16:03,509 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:16:03,559 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 678 ms
+2019-10-19 13:16:03,668 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:16:03,763 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:16:03,763 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.137 seconds (JVM running for 1.917)
+2019-10-19 13:16:19,581 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:16:19,584 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:16:36,457 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:16:36,585 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 9972 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:16:36,586 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:16:37,259 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:16:37,321 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 700 ms
+2019-10-19 13:16:37,431 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:16:37,540 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:16:37,542 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.178 seconds (JVM running for 1.941)
+2019-10-19 13:16:42,007 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:16:42,010 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:17:42,493 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:17:42,615 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 13124 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:17:42,615 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:17:43,272 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:17:43,326 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 681 ms
+2019-10-19 13:17:43,442 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:17:43,542 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:17:43,542 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.152 seconds (JVM running for 1.903)
+2019-10-19 13:17:50,861 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:17:50,864 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:21:42,237 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:21:42,362 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 4720 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:21:42,362 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:21:43,112 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:21:43,175 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 766 ms
+2019-10-19 13:21:43,268 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:21:43,396 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:21:43,396 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.24 seconds (JVM running for 1.988)
+2019-10-19 13:21:49,488 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:21:49,492 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 13:22:12,489 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:22:12,616 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 8016 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:22:12,617 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:22:13,292 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:22:13,355 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 704 ms
+2019-10-19 13:22:13,489 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:22:13,602 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:22:13,602 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.213 seconds (JVM running for 1.969)
+2019-10-19 13:22:15,660 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:22:15,662 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 2 ms
+2019-10-19 13:23:37,717 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:23:37,870 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 5828 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:23:37,870 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:23:38,566 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:23:38,611 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 710 ms
+2019-10-19 13:23:38,736 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:23:38,845 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:23:38,847 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.21 seconds (JVM running for 1.967)
+2019-10-19 13:23:41,947 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:23:41,950 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:24:25,958 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:24:26,098 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 11848 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:24:26,098 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:24:26,831 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:24:26,894 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 764 ms
+2019-10-19 13:24:27,036 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:24:27,146 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:24:27,146 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.271 seconds (JVM running for 1.998)
+2019-10-19 13:24:30,583 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:24:30,586 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 13:26:17,931 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 13:26:18,072 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 10800 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 13:26:18,072 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 13:26:18,709 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 13:26:18,789 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 684 ms
+2019-10-19 13:26:18,883 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 13:26:18,992 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 13:26:18,992 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 1.158 seconds (JVM running for 1.874)
+2019-10-19 13:26:22,702 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 13:26:22,706 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 14:23:03,679 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:23:03,831 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 2384 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:23:03,832 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:23:04,759 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:23:04,822 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 939 ms
+2019-10-19 14:23:04,879 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:23:05,088 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:23:05,191 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisCRUDController': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+2019-10-19 14:23:05,193 [main] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 14:23:05,277 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 14:23:05,283 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisCRUDController': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1533)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1518)
+	... 43 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:640)
+	... 56 more
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration.sqlSessionFactory(MapperAutoConfiguration.java:155)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$aa88cd71.CGLIB$sqlSessionFactory$0(<generated>)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$aa88cd71$$FastClassBySpringCGLIB$$c1024b20.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$aa88cd71.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 57 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521)
+	... 70 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addResultMap(Configuration.java:626)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:214)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:285)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 72 more
+2019-10-19 14:23:31,280 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:23:31,422 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 15984 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:23:31,423 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:23:32,276 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:23:32,338 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 875 ms
+2019-10-19 14:23:32,396 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:23:32,590 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:23:32,684 [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:558)] - [WARN] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisCRUDController': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+2019-10-19 14:23:32,685 [main] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 14:23:32,752 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:136)] - [INFO] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-19 14:23:32,757 [main] [org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:826)] - [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myBatisCRUDController': Unsatisfied dependency expressed through field 'sysUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at top.xiesen.verify.RockVerifyApplication.main(RockVerifyApplication.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl': Unsatisfied dependency expressed through field 'sysUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 19 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [D:\Develop\workspace\code-repo\rock-verify\target\classes\top\xiesen\verify\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1533)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1518)
+	... 43 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:640)
+	... 56 more
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\Develop\workspace\code-repo\rock-verify\target\classes\mapper\SysUserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration.sqlSessionFactory(MapperAutoConfiguration.java:155)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$8a81ad2e.CGLIB$sqlSessionFactory$1(<generated>)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$8a81ad2e$$FastClassBySpringCGLIB$$1d8e8dbd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$8a81ad2e.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 57 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521)
+	... 70 more
+Caused by: java.lang.IllegalArgumentException: Result Maps collection already contains value for top.xiesen.verify.mapper.SysUserMapper.BaseResultMap
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addResultMap(Configuration.java:626)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:214)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:285)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 72 more
+2019-10-19 14:24:57,387 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:24:57,534 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12976 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:24:57,535 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:24:58,375 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:24:58,436 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 852 ms
+2019-10-19 14:24:58,493 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:24:58,687 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:24:59,219 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:24:59,295 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:24:59,396 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:24:59,398 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.098 seconds (JVM running for 2.946)
+2019-10-19 14:25:29,705 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:25:29,710 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 5 ms
+2019-10-19 14:28:17,980 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:28:18,112 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 15452 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:28:18,113 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:28:18,940 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:28:19,008 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 858 ms
+2019-10-19 14:28:19,066 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:28:19,265 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:28:19,788 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:28:19,865 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:28:19,957 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:28:19,959 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.066 seconds (JVM running for 2.88)
+2019-10-19 14:28:26,103 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:28:26,107 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 14:31:35,779 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:31:35,942 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 11580 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:31:35,943 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:31:36,830 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:31:36,898 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 893 ms
+2019-10-19 14:31:36,958 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:31:37,162 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:31:37,704 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:31:37,784 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:31:37,876 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:31:37,878 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.185 seconds (JVM running for 3.074)
+2019-10-19 14:31:59,551 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:31:59,554 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 3 ms
+2019-10-19 14:42:07,156 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:42:07,294 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 8392 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:42:07,295 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:42:08,149 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:42:08,212 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 874 ms
+2019-10-19 14:42:08,272 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:42:08,478 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:42:09,068 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:42:09,147 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:42:09,243 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:42:09,245 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.178 seconds (JVM running for 3.013)
+2019-10-19 14:42:43,831 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:42:43,835 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 14:45:47,570 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:45:47,761 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 9460 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:45:47,762 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:45:48,698 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:45:48,768 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 952 ms
+2019-10-19 14:45:48,842 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:45:49,072 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:45:49,673 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:45:49,766 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:45:49,873 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:45:49,876 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.417 seconds (JVM running for 3.723)
+2019-10-19 14:45:54,872 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:45:54,877 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 5 ms
+2019-10-19 14:46:08,050 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:46:08,052 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 14:48:39,421 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:48:39,655 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12192 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:48:39,656 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:48:40,772 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:48:40,853 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1115 ms
+2019-10-19 14:48:40,926 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:48:41,179 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:48:41,764 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:48:41,861 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:48:41,971 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:48:41,973 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.685 seconds (JVM running for 3.75)
+2019-10-19 14:49:28,440 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:49:28,444 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 14:58:10,756 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:58:10,759 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 14:58:42,848 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 14:58:43,060 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12480 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 14:58:43,061 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 14:58:44,006 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 14:58:44,076 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 964 ms
+2019-10-19 14:58:44,144 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 14:58:44,385 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 14:58:44,994 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 14:58:45,086 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 14:58:45,197 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 14:58:45,200 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.496 seconds (JVM running for 3.826)
+2019-10-19 14:59:00,999 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 14:59:01,005 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 5 ms
+2019-10-19 15:00:55,854 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:00:55,856 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 15:01:26,763 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:01:26,965 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12312 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:01:26,967 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:01:28,013 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:01:28,097 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1063 ms
+2019-10-19 15:01:28,175 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:01:28,413 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:01:29,065 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:01:29,157 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:01:29,265 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:01:29,268 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.643 seconds (JVM running for 3.669)
+2019-10-19 15:01:37,383 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 15:01:37,387 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 15:06:06,284 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:06:06,287 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 15:07:40,124 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:07:40,334 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 9352 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:07:40,335 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:07:41,556 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:07:41,627 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1238 ms
+2019-10-19 15:07:41,694 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:07:41,941 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:07:42,624 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:07:42,718 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:07:42,829 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:07:42,831 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.832 seconds (JVM running for 3.965)
+2019-10-19 15:11:07,966 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 15:11:07,971 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 5 ms
+2019-10-19 15:11:38,990 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:11:38,993 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 15:12:24,196 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:12:24,391 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 16668 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:12:24,392 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:12:25,376 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:12:25,445 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 993 ms
+2019-10-19 15:12:25,512 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:12:25,742 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:12:26,374 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:12:26,465 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:12:26,574 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:12:26,577 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.494 seconds (JVM running for 3.43)
+2019-10-19 15:13:10,203 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 15:13:10,207 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 15:13:21,550 [SpringContextShutdownHook] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208)] - [INFO] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:13:21,553 [SpringContextShutdownHook] [com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1608)] - [INFO] {dataSource-1} closed
+2019-10-19 15:19:40,174 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:19:40,325 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 2604 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:19:40,326 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:19:41,286 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:19:41,372 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 997 ms
+2019-10-19 15:19:41,453 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:19:41,721 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:19:42,341 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:19:42,422 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:19:42,475 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'taskScheduler'
+2019-10-19 15:19:42,524 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:19:42,526 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.445 seconds (JVM running for 3.235)
+2019-10-19 15:20:26,773 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:20:26,946 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 12204 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:20:26,947 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:20:27,837 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:20:27,902 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 909 ms
+2019-10-19 15:20:27,967 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:20:28,221 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:20:28,974 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:20:29,072 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:20:29,150 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'taskScheduler'
+2019-10-19 15:20:29,229 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:20:29,233 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.571 seconds (JVM running for 3.353)
+2019-10-19 15:23:08,879 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:23:09,024 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 17164 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:23:09,025 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:23:09,909 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:23:09,977 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 905 ms
+2019-10-19 15:23:10,039 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:23:10,276 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:23:10,844 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:23:10,928 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:23:10,979 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'taskScheduler'
+2019-10-19 15:23:11,027 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:23:11,029 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.243 seconds (JVM running for 3.052)
+2019-10-19 15:28:44,566 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:28:44,702 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 10956 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:28:44,703 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:28:45,572 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:28:45,634 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 891 ms
+2019-10-19 15:28:45,692 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:28:45,907 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:28:46,472 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:28:46,553 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:28:46,609 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'taskScheduler'
+2019-10-19 15:28:46,658 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:28:46,660 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.18 seconds (JVM running for 2.954)
+2019-10-19 15:28:59,505 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 15:28:59,509 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
+2019-10-19 15:29:42,567 [background-preinit] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] - [INFO] HV000001: Hibernate Validator 6.0.17.Final
+2019-10-19 15:29:42,704 [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55)] - [INFO] Starting RockVerifyApplication on Allen-xs with PID 2836 (D:\Develop\workspace\code-repo\rock-verify\target\classes started by Allen in D:\Develop\workspace\code-repo\rock-verify)
+2019-10-19 15:29:42,705 [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651)] - [INFO] No active profile set, falling back to default profiles: default
+2019-10-19 15:29:43,717 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:92)] - [INFO] Tomcat initialized with port(s): 8080 (http)
+2019-10-19 15:29:43,788 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:284)] - [INFO] Root WebApplicationContext: initialization completed in 1035 ms
+2019-10-19 15:29:43,874 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource(DruidDataSourceAutoConfigure.java:56)] - [INFO] Init DruidDataSource
+2019-10-19 15:29:44,096 [main] [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:847)] - [INFO] {dataSource-1} inited
+2019-10-19 15:29:44,695 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-19 15:29:44,783 [main] [org.thymeleaf.templatemode.TemplateMode.parse(TemplateMode.java:150)] - [WARN] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-19 15:29:44,837 [main] [org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171)] - [INFO] Initializing ExecutorService 'taskScheduler'
+2019-10-19 15:29:44,887 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204)] - [INFO] Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-19 15:29:44,889 [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61)] - [INFO] Started RockVerifyApplication in 2.412 seconds (JVM running for 3.233)
+2019-10-19 15:29:48,663 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - [INFO] Initializing Servlet 'dispatcherServlet'
+2019-10-19 15:29:48,668 [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - [INFO] Completed initialization in 4 ms
