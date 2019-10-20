@@ -19,7 +19,11 @@ public class BusinessServiceImpl implements BusinessService {
     @Autowired
     private BusinessMapper businessMapper;
 
-
+    /**
+     * 此方法尽量不要使用，保存数据不检查 sys_name 是否存在
+     *
+     * @param dto
+     */
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
     public void save(Business dto) {
@@ -29,16 +33,28 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
     public JSONResult<String> delete(Business dto) {
-        String id = dto.getId();
-        businessMapper.deleteByPrimaryKey(id);
-        return JSONResult.ok(id);
+        String id = null;
+        if (dto != null) {
+            id = dto.getId();
+        }
+
+        if (id != null) {
+            businessMapper.deleteByPrimaryKey(id);
+            return JSONResult.ok(id);
+        } else {
+            return JSONResult.errorMsg("Business id 不存在");
+        }
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
     public JSONResult<String> deleteById(String id) {
-        businessMapper.deleteByPrimaryKey(id);
-        return JSONResult.ok(id);
+        if (id != null) {
+            businessMapper.deleteByPrimaryKey(id);
+            return JSONResult.ok(id);
+        } else {
+            return JSONResult.errorMsg("Business id 不存在");
+        }
     }
 
     @Override
@@ -50,7 +66,11 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     public JSONResult<Business> findById(String id) {
-        return JSONResult.ok(businessMapper.selectByPrimaryKey(id));
+        if (id != null) {
+            return JSONResult.ok(businessMapper.selectByPrimaryKey(id));
+        } else {
+            return JSONResult.errorMsg("Business id 不存在");
+        }
     }
 
     @Override
@@ -81,14 +101,14 @@ public class BusinessServiceImpl implements BusinessService {
         Example.Criteria criteria = example.createCriteria();
 
         if (!StringUtils.isEmptyOrWhitespace(dto.getSysName())) {
-            criteria.andLike("sys_name", "%" + dto.getSysName() + "%");
+            criteria.andLike("sysName", "%" + dto.getSysName() + "%");
         }
 
         if (!StringUtils.isEmptyOrWhitespace(dto.getSysNickname())) {
-            criteria.andLike("sys_nickname", "%" + dto.getSysNickname() + "%");
+            criteria.andLike("sysNickname", "%" + dto.getSysNickname() + "%");
         }
 
-        example.orderBy("create_time").desc();
+        example.orderBy("createTime").desc();
         List<Business> businessList = businessMapper.selectByExample(example);
         return JSONResult.ok(businessList);
     }
