@@ -13,18 +13,18 @@ public class TestKafka {
     public void testSendMessageSingleton() throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         Random random = new Random();
-//        for (int j = 0; j < 5; j++) {
+        for (int j = 0; j < 5; j++) {
 //            for (int i = 1; i <= 1000000; i++) {
-        User user = new User();
-        int randint = (int) Math.floor((random.nextDouble() * 100000.0)) + 1; // 1 - 100000
-        user.setUserId(1);
-        user.setTimestamps(String.valueOf(System.currentTimeMillis()));
-        user.setFuncId(randint);
-        String msg = JSONObject.toJSON(user).toString();
-        executor.submit(new HandlerProducer("xiesen5", msg));
+            User user = new User();
+            int randint = (int) Math.floor((random.nextDouble() * 100000.0)) + 1; // 1 - 100000
+            user.setUserId(1);
+            user.setTimestamps(String.valueOf(System.currentTimeMillis()));
+            user.setFuncId(randint);
+            String msg = JSONObject.toJSON(user).toString();
+            executor.submit(new HandlerProducer("xiesen7", msg));
 //            }
 //            Thread.sleep(10000);
-//        }
+        }
     }
 
     public void testSendMessageSingleton3() throws InterruptedException {
@@ -113,6 +113,6 @@ public class TestKafka {
 
     public static void main(String[] args) throws InterruptedException {
         TestKafka testKafka = new TestKafka();
-        testKafka.testSendMessageSingleton3();
+        testKafka.testSendMessageSingleton();
     }
 }
