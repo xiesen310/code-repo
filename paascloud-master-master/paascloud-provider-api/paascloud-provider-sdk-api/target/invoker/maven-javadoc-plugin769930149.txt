@@ -1,0 +1,37 @@
+Invoking Maven for the goals: [org.apache.maven.plugins:maven-javadoc-plugin:2.10.4:javadoc] with no properties
+
+M2_HOME=D:\develop\maven\apache-maven-3.6.1
+MAVEN_OPTS=null
+JAVA_HOME=D:\develop\Java\jdk1.8.0_181\jre\..
+JAVA_OPTS=null
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< com.liuzm.paascloud.common:paascloud-common-zk >-----------
+[INFO] Building paascloud-common-zk 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.10.4:javadoc (default-cli) > generate-sources @ paascloud-common-zk >>>
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.10.4:javadoc (default-cli) < generate-sources @ paascloud-common-zk <<<
+[INFO] 
+[WARNING] The POM for com.liuzm.paascloud.common:paascloud-common-base:jar:1.0 is missing, no dependency information available
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/liuzm/paascloud/common/paascloud-common-util/1.0/paascloud-common-util-1.0.pom
+[WARNING] The POM for com.liuzm.paascloud.common:paascloud-common-util:jar:1.0 is missing, no dependency information available
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/liuzm/paascloud/common/paascloud-common-config/1.0/paascloud-common-config-1.0.pom
+[WARNING] The POM for com.liuzm.paascloud.common:paascloud-common-config:jar:1.0 is missing, no dependency information available
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/liuzm/paascloud/common/paascloud-common-util/1.0/paascloud-common-util-1.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/liuzm/paascloud/common/paascloud-common-config/1.0/paascloud-common-config-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.957 s
+[INFO] Finished at: 2019-09-24T14:30:36+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project paascloud-common-zk: Could not resolve dependencies for project com.liuzm.paascloud.common:paascloud-common-zk:jar:1.0: The following artifacts could not be resolved: com.liuzm.paascloud.common:paascloud-common-base:jar:1.0, com.liuzm.paascloud.common:paascloud-common-util:jar:1.0, com.liuzm.paascloud.common:paascloud-common-config:jar:1.0: Failure to find com.liuzm.paascloud.common:paascloud-common-base:jar:1.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
