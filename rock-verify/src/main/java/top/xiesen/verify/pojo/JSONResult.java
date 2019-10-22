@@ -32,6 +32,8 @@ public class JSONResult<T> {
 
     private String ok;    // 不使用
 
+
+
     public static JSONResult build(Integer status, String msg, Object data) {
         return new JSONResult(status, msg, data);
     }
@@ -175,5 +177,15 @@ public class JSONResult<T> {
 
     public void setOk(String ok) {
         this.ok = ok;
+    }
+
+    @Override
+    public String toString() {
+        return "JSONResult{" +
+                "status=" + status +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                ", ok='" + ok + '\'' +
+                '}';
     }
 }
