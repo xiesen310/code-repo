@@ -6,18 +6,21 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+/**
+ * rockConfig.properties 配置文件映射
+ */
 @Component
 @PropertySource(value = "classpath:rockConfig.properties", encoding = "UTF-8")
 @Getter
 @Setter
 public class RockConfig {
-    @Value("${top.xiesen.verify.name}")
-    private String name;
+    @Value("${rock.verify.kafka.servers}")
+    private String kafkaServers;
 
-    @Value("${top.xiesen.verify.website}")
-    private String website;
+    @Value("${rock.verify.kafka.batch.size}")
+    private Integer kafkaBatchSize;
 
-    @Value("${top.xiesen.verify.language}")
-    private String language;
-
+    @Value("${rock.verify.kafka.topic}")
+    private String kafkaTopic;
+    
 }
