@@ -1,4 +1,4 @@
-package top.xiesen.verify.avro;
+package top.xiesen.verify.kafka.avro;
 
 /**
  * AvroFactory

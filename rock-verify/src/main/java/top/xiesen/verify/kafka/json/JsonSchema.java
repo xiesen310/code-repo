@@ -1,4 +1,4 @@
-package top.xiesen.verify.json;
+package top.xiesen.verify.kafka.json;
 
 import org.everit.json.schema.ValidationException;
 import org.everit.json.schema.loader.SchemaLoader;

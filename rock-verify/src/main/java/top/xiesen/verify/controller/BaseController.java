@@ -49,12 +49,10 @@ public interface BaseController<T, ID extends Serializable> {
     /**
      * 分页查询
      *
-     * @param t
-     * @param page 页码
+     * @param page     页码
      * @param pageSize 一页显示几条
      * @return
      */
-    JSONResult listPaged(@RequestBody T t
-            , @PathVariable(value = "page", required = true) Integer page
-            , @PathVariable(value = "pageSize", required = true) Integer pageSize);
+    JSONResult listPaged(@PathVariable(value = "page", required = true) int page
+            , @PathVariable(value = "pageSize", required = true) int pageSize);
 }

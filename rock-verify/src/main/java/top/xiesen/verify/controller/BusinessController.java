@@ -75,11 +75,9 @@ public class BusinessController implements BaseController<Business, String> {
 
     @ApiOperation("分页查询")
     @RequestMapping(value = "/{page}/{pageSize}", method = RequestMethod.GET)
-    @Override
-    public JSONResult listPaged(@RequestBody Business business
-            , @PathVariable(value = "page", required = true) Integer page
-            , @PathVariable(value = "pageSize", required = true) Integer pageSize) {
-        return businessService.findAllPaged(business, page, pageSize);
+    public JSONResult listPaged(@PathVariable(value = "page", required = true) int page
+            , @PathVariable(value = "pageSize", required = true) int pageSize) {
+        return businessService.findAllPaged(page, pageSize);
     }
 
 }

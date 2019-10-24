@@ -93,20 +93,12 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<Business>> findAllPaged(Business dto, Integer page, Integer pageSize) {
+    public JSONResult<List<Business>> findAllPaged(Integer page, Integer pageSize) {
         // 开始分页
         PageHelper.startPage(page, pageSize);
 
         Example example = new Example(Business.class);
         Example.Criteria criteria = example.createCriteria();
-
-        if (!StringUtils.isEmpty(dto.getSysName())) {
-            criteria.andLike("sysName", "%" + dto.getSysName() + "%");
-        }
-
-        if (!StringUtils.isEmpty(dto.getSysNickname())) {
-            criteria.andLike("sysNickname", "%" + dto.getSysNickname() + "%");
-        }
 
         example.orderBy("createTime").desc();
         List<Business> businessList = businessMapper.selectByExample(example);
@@ -136,7 +128,7 @@ public class BusinessServiceImpl implements BusinessService {
         Example example = new Example(Business.class);
         Example.Criteria criteria = example.createCriteria();
 
-        if (!StringUtils.isEmpty(sysName)) {
+        if (!org.thymeleaf.util.StringUtils.isEmptyOrWhitespace(sysName)) {
             criteria.andEqualTo("sysName", sysName);
         }
 

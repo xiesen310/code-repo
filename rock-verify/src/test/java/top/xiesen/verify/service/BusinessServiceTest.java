@@ -50,7 +50,7 @@ public class BusinessServiceTest {
     @Test
     public void findAllPaged() {
         Business business = new Business();
-        JSONResult<List<Business>> allPaged = businessServiceImpl.findAllPaged(business, 1, 2);
+        JSONResult<List<Business>> allPaged = businessServiceImpl.findAllPaged(1, 2);
         System.out.println(allPaged);
     }
 

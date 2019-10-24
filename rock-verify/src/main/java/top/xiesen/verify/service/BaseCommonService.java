@@ -56,11 +56,10 @@ public interface BaseCommonService<T, ID extends Serializable> {
     /**
      * 分页查询所有
      *
-     * @param dto
      * @param page
      * @param pageSize
      * @return
      */
-    JSONResult<List<T>> findAllPaged(T dto, Integer page, Integer pageSize);
+    JSONResult<List<T>> findAllPaged(Integer page, Integer pageSize);
 
 }
