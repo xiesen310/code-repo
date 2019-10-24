@@ -5,12 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.thymeleaf.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 import top.xiesen.verify.mapper.BusinessMapper;
 import top.xiesen.verify.pojo.Business;
 import top.xiesen.verify.pojo.JSONResult;
 import top.xiesen.verify.service.BusinessService;
+import top.xiesen.verify.utils.StringUtils;
 
 import java.util.List;
 
@@ -59,8 +59,18 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public void update(Business dto) {
-        businessMapper.updateByPrimaryKeySelective(dto);
+    public JSONResult update(Business dto) {
+        try {
+            String id = dto.getId();
+            if (StringUtils.isEmpty(id)) {
+                return JSONResult.errorMsg("更新数据 id 不存在");
+            } else {
+                businessMapper.updateByPrimaryKeySelective(dto);
+                return JSONResult.ok();
+            }
+        } catch (Exception e) {
+            return JSONResult.errorMsg("更新 Business 数据失败");
+        }
     }
 
     @Override
@@ -75,18 +85,8 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<Business>> findAll(Business dto) {
+    public JSONResult<List<Business>> findAll() {
         Example example = new Example(Business.class);
-        Example.Criteria criteria = example.createCriteria();
-
-        if (!StringUtils.isEmptyOrWhitespace(dto.getSysName())) {
-            criteria.andLike("sys_name", "%" + dto.getSysName() + "%");
-        }
-
-        if (!StringUtils.isEmptyOrWhitespace(dto.getSysNickname())) {
-            criteria.andLike("sys_nickname", "%" + dto.getSysNickname() + "%");
-        }
-
         List<Business> businessList = businessMapper.selectByExample(example);
         return JSONResult.ok(businessList);
     }
@@ -100,11 +100,11 @@ public class BusinessServiceImpl implements BusinessService {
         Example example = new Example(Business.class);
         Example.Criteria criteria = example.createCriteria();
 
-        if (!StringUtils.isEmptyOrWhitespace(dto.getSysName())) {
+        if (!StringUtils.isEmpty(dto.getSysName())) {
             criteria.andLike("sysName", "%" + dto.getSysName() + "%");
         }
 
-        if (!StringUtils.isEmptyOrWhitespace(dto.getSysNickname())) {
+        if (!StringUtils.isEmpty(dto.getSysNickname())) {
             criteria.andLike("sysNickname", "%" + dto.getSysNickname() + "%");
         }
 
@@ -115,15 +115,18 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public void saveBusiness(Business business) {
+    public JSONResult saveBusiness(Business business) {
         if (business != null) {
             String sysName = business.getSysName();
             List<Business> businessList = findBusinessBySysName(sysName);
             if (businessList.size() <= 0) {
                 save(business);
+                return JSONResult.ok(sysName + "插入成功");
             } else {
-                System.out.println("插入数据失败");
+                return JSONResult.errorMsg(sysName + " 已存在,插入 Business 失败");
             }
+        } else {
+            return JSONResult.errorMsg("business 对象为空,插入 Business 失败");
         }
     }
 
@@ -133,7 +136,7 @@ public class BusinessServiceImpl implements BusinessService {
         Example example = new Example(Business.class);
         Example.Criteria criteria = example.createCriteria();
 
-        if (!StringUtils.isEmptyOrWhitespace(sysName)) {
+        if (!StringUtils.isEmpty(sysName)) {
             criteria.andEqualTo("sysName", sysName);
         }
 

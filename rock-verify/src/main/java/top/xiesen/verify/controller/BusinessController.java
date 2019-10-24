@@ -19,9 +19,9 @@ import java.util.Date;
  * DELETE（DELETE）：从服务器删除资源。
  */
 @RestController
-@RequestMapping("/api/business")
+@RequestMapping("/api/v1/business")
 @Api("业务操作接口")
-public class BusinessController {
+public class BusinessController implements BaseController<Business, String> {
 
     @Autowired
     private BusinessService businessService;
@@ -29,8 +29,10 @@ public class BusinessController {
     @Autowired
     private Sid sid;
 
+
     @ApiOperation("添加业务")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @Override
     public JSONResult add(@RequestBody Business business) {
         String id = sid.nextShort();
         if (business != null) {
@@ -45,31 +47,35 @@ public class BusinessController {
 
     @ApiOperation("更新业务")
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
+    @Override
     public JSONResult update(@RequestBody Business business) {
-        businessService.update(business);
-        return JSONResult.ok("更新成功");
+        return businessService.update(business);
     }
 
     @ApiOperation("根据 ID 删除业务")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    @Override
     public JSONResult delete(@PathVariable(value = "id", required = true) String id) {
         return businessService.deleteById(id);
     }
 
     @ApiOperation("根据 ID 查询业务")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @Override
     public JSONResult findById(@PathVariable(value = "id", required = true) String id) {
         return businessService.findById(id);
     }
 
     @ApiOperation("查询所有")
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public JSONResult list(@RequestBody Business business) {
-        return businessService.findAll(business);
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    @Override
+    public JSONResult list() {
+        return businessService.findAll();
     }
 
-    @ApiOperation("查询所有")
-    @RequestMapping(value = "/listPaged/{page}/{pageSize}", method = RequestMethod.GET)
+    @ApiOperation("分页查询")
+    @RequestMapping(value = "/{page}/{pageSize}", method = RequestMethod.GET)
+    @Override
     public JSONResult listPaged(@RequestBody Business business
             , @PathVariable(value = "page", required = true) Integer page
             , @PathVariable(value = "pageSize", required = true) Integer pageSize) {

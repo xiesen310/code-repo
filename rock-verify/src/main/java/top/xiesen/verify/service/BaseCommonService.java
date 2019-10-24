@@ -36,7 +36,7 @@ public interface BaseCommonService<T, ID extends Serializable> {
      *
      * @param dto
      */
-    void update(T dto);
+    JSONResult update(T dto);
 
     /**
      * 根据 id 查询数据
@@ -49,10 +49,9 @@ public interface BaseCommonService<T, ID extends Serializable> {
     /**
      * 查询所有
      *
-     * @param dto
      * @return
      */
-    JSONResult<List<T>> findAll(T dto);
+    JSONResult<List<T>> findAll();
 
     /**
      * 分页查询所有

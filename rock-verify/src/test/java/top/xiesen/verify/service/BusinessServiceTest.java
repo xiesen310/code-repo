@@ -1,5 +1,6 @@
 package top.xiesen.verify.service;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.n3r.idworker.Sid;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import top.xiesen.verify.exception.DatabaseInsertException;
 import top.xiesen.verify.pojo.Business;
 import top.xiesen.verify.pojo.JSONResult;
 import top.xiesen.verify.service.impl.BusinessServiceImpl;
@@ -27,7 +29,7 @@ public class BusinessServiceTest {
     private Sid sid;
 
     @Test
-    public void saveBusiness() {
+    public void saveBusiness() throws DatabaseInsertException {
         String id = sid.nextShort();
         Business business = new Business();
         business.setId(id);
@@ -41,8 +43,7 @@ public class BusinessServiceTest {
 
     @Test
     public void findAll() {
-        Business business = new Business();
-        JSONResult<List<Business>> all = businessServiceImpl.findAll(business);
+        JSONResult<List<Business>> all = businessServiceImpl.findAll();
         System.out.println(all);
     }
 
@@ -65,10 +66,11 @@ public class BusinessServiceTest {
         Business business = new Business();
         business.setId(id);
         business.setCreateBy("admin");
-        business.setSysName("test1");
-        business.setSysNickname("测试");
+        business.setSysName("test2");
+        business.setSysNickname("测试2");
         business.setDescription("创建业务测试");
         business.setCreateTime(new Date());
+        System.out.println(JSON.toJSON(business));
         businessServiceImpl.save(business);
     }
 
@@ -85,7 +87,6 @@ public class BusinessServiceTest {
         JSONResult<String> result = businessServiceImpl.deleteById("191019H54T1YZ4SW");
         System.out.println(result.getMsg());
     }
-
 
 
 }
