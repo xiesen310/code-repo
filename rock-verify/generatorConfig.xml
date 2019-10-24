@@ -4,34 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-   <!-- <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-        <property name="beginningDelimiter" value="`"/>
-        <property name="endingDelimiter" value="`"/>
-
-        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="top.xiesen.verify.utils.MyMapper"/>
-        </plugin>
-
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/test"
-                        userId="root"
-                        password="root">
-        </jdbcConnection>
-
-        &lt;!&ndash; 对于生成的pojo所在包 &ndash;&gt;
-        <javaModelGenerator targetPackage="top.xiesen.verify.pojo" targetProject="src/main/java"/>
-
-        &lt;!&ndash; 对于生成的mapper所在目录 &ndash;&gt;
-        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
-
-        &lt;!&ndash; 配置mapper对应的java映射 &ndash;&gt;
-        <javaClientGenerator targetPackage="top.xiesen.verify.mapper" targetProject="src/main/java"
-                             type="XMLMAPPER"/>
-
-        <table tableName="sys_user"></table>
-    </context>-->
-
-    <context id="MysqlContext_business" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="MysqlContextUser" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -55,6 +28,33 @@
         <javaClientGenerator targetPackage="top.xiesen.verify.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="business"></table>
+        <table tableName="sys_user"></table>
     </context>
+
+    <!--<context id="MysqlContext_business" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="top.xiesen.verify.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/rock"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        &lt;!&ndash; 对于生成的pojo所在包 &ndash;&gt;
+        <javaModelGenerator targetPackage="top.xiesen.verify.pojo" targetProject="src/main/java"/>
+
+        &lt;!&ndash; 对于生成的mapper所在目录 &ndash;&gt;
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        &lt;!&ndash; 配置mapper对应的java映射 &ndash;&gt;
+        <javaClientGenerator targetPackage="top.xiesen.verify.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="business"></table>
+    </context>-->
 </generatorConfiguration>

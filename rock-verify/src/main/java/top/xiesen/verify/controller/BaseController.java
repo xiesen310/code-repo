@@ -13,7 +13,7 @@ public interface BaseController<T, ID extends Serializable> {
      * @param t
      * @return
      */
-    JSONResult add(@RequestBody T t);
+    JSONResult add(@RequestBody T t) throws Exception;
 
     /**
      * 更新
