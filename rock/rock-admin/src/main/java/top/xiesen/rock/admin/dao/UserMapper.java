@@ -3,6 +3,10 @@ package top.xiesen.rock.admin.dao;
 import org.apache.ibatis.annotations.Mapper;
 import top.xiesen.rock.admin.model.User;
 
+/**
+ * 用户映射
+ * @author 谢森
+ */
 @Mapper
 public interface UserMapper {
     /**
@@ -45,5 +49,10 @@ public interface UserMapper {
      */
     int insertUser(User user);
 
+    /**
+     * 根据用户名查询
+     * @param userName 用户名
+     * @return User
+     */
     User selectUserByLoginName(String userName);
 }

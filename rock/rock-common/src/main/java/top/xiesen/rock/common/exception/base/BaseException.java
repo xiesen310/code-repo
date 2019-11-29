@@ -2,6 +2,7 @@ package top.xiesen.rock.common.exception.base;
 
 /**
  * 基础异常
+ * @author 谢森
  */
 public class BaseException extends RuntimeException {
 

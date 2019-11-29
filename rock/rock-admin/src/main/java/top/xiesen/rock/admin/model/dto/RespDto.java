@@ -6,6 +6,7 @@ import lombok.Setter;
 
 /**
  * 返回给请求方的响应通用结构DataTransferObject(DTO)
+ * @author 谢森
  */
 @Getter
 @Setter

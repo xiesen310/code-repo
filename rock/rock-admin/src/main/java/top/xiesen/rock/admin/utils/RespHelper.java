@@ -3,6 +3,10 @@ package top.xiesen.rock.admin.utils;
 import top.xiesen.rock.admin.model.dto.RespDto;
 import top.xiesen.rock.common.constant.CodeTable;
 
+/**
+ * 结果集帮助类
+ * @author 谢森
+ */
 public class RespHelper {
     public static <T> RespDto<T> createEmptyRespDto() {
         return new RespDto<>();

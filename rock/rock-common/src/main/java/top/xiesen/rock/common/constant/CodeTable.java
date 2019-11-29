@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 业务处理状态码定义基本类
+ * @author 谢森
  */
 public class CodeTable {
     public static final Map<Integer, String> CODE_TABLE = new HashMap<>(1000);

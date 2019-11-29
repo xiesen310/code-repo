@@ -16,7 +16,10 @@ import top.xiesen.security.demo.dto.UserQueryCondition;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @author 谢森
+ */
 @RestController
 @RequestMapping("/user")
 public class UserController {

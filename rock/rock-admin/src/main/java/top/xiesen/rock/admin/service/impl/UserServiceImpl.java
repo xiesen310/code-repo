@@ -10,6 +10,10 @@ import top.xiesen.rock.admin.utils.RespHelper;
 import top.xiesen.rock.common.constant.CodeTable;
 import top.xiesen.rock.common.utils.StringUtils;
 
+/**
+ * 用户服务
+ * @author 谢森
+ */
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired

@@ -2,6 +2,7 @@ package top.xiesen.rock.common.enums;
 
 /**
  * 业务操作类型
+ * @author 谢森
  */
 public enum BusinessType {
     /**

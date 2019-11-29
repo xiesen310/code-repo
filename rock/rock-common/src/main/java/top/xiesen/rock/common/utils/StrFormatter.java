@@ -2,6 +2,10 @@ package top.xiesen.rock.common.utils;
 
 import top.xiesen.rock.core.text.Convert;
 
+/**
+ * 字符串格式化
+ * @author 谢森
+ */
 public class StrFormatter {
     public static final String EMPTY_JSON = "{}";
     public static final char C_BACKSLASH = '\\';

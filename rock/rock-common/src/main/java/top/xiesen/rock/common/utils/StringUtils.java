@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * 字符串工具类
+ *
+ * @author 谢森
  */
 public class StringUtils {
     /**
@@ -16,6 +18,11 @@ public class StringUtils {
      * 下划线
      */
     private static final char SEPARATOR = '_';
+    /**
+     * 下划线 字符串
+     */
+    private static final String SEPARATOR_STR = "_";
+
 
     /**
      * 获取参数不为空值
@@ -256,9 +263,11 @@ public class StringUtils {
                 nexteCharIsUpperCase = Character.isUpperCase(str.charAt(i + 1));
             }
 
+            Boolean judgeConditions = (i != 0 && !preCharIsUpperCase) && curreCharIsUpperCase;
+
             if (preCharIsUpperCase && curreCharIsUpperCase && !nexteCharIsUpperCase) {
                 sb.append(SEPARATOR);
-            } else if ((i != 0 && !preCharIsUpperCase) && curreCharIsUpperCase) {
+            } else if (judgeConditions) {
                 sb.append(SEPARATOR);
             }
             sb.append(Character.toLowerCase(c));
@@ -297,12 +306,12 @@ public class StringUtils {
         if (name == null || name.isEmpty()) {
             // 没必要转换
             return "";
-        } else if (!name.contains("_")) {
+        } else if (!name.contains(SEPARATOR_STR)) {
             // 不含下划线，仅将首字母大写
             return name.substring(0, 1).toUpperCase() + name.substring(1);
         }
         // 用下划线将原始字符串分割
-        String[] camels = name.split("_");
+        String[] camels = name.split(SEPARATOR_STR);
         for (String camel : camels) {
             // 跳过原始字符串中开头、结尾的下换线或双重下划线
             if (camel.isEmpty()) {

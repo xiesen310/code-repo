@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 字符集工具类
+ * @author 谢森
  */
 public class CharsetKit {
     /** ISO-8859-1 */

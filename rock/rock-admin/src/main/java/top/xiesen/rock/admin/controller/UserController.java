@@ -10,6 +10,9 @@ import top.xiesen.rock.admin.model.User;
 import top.xiesen.rock.admin.model.dto.RespDto;
 import top.xiesen.rock.admin.service.UserService;
 
+/**
+ * @author 谢森
+ */
 @Api(value = "用户接口api")
 @Controller
 public class UserController {

@@ -1,5 +1,8 @@
 package top.xiesen.security.demo.dto;
-
+/**
+ *
+ * @author 谢森
+ */
 public class UserQueryCondition {
     private String username;
     private int age;

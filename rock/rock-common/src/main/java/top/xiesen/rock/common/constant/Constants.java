@@ -2,6 +2,7 @@ package top.xiesen.rock.common.constant;
 
 /**
  * 通用常量信息
+ * @author 谢森
  */
 public class Constants {
     /**
