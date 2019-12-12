@@ -1,16 +1,40 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
+# maven ignore
+target
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+release
+sources
+lib
+plugins
+modules
 
-# Editor directories and files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+# eclipse ignore
+*.class
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+.mvn/
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+logs
+
+# system ignore
+.DS_Store
+Thumbs.db
+**/*.jar
+**/*.class
+
