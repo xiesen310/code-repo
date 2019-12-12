@@ -35,7 +35,7 @@ public class ZorkProducer {
     /**
      * kafka 集群
      */
-    private static final String BROKER_LIST = "zorkdata222:9092";
+    private static final String BROKER_LIST = "zorkdata224:9092";
 
     /**
      * 线程数
@@ -138,7 +138,7 @@ public class ZorkProducer {
             int num = 0;
             for (int i = 0; i< MSG_SIZE; i++ ) {
                 msg = createZorkdataJsonString();
-                record = new ProducerRecord<>(TOPIC,"zorklog",msg);
+                record = new ProducerRecord<>(TOPIC,"test",msg);
                 producer.send(record, new Callback() {
                     @Override
                     public void onCompletion(RecordMetadata recordMetadata, Exception e) {

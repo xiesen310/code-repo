@@ -35,7 +35,8 @@ public class ZorkAvroProducer {
     /**
      * kafka 集群
      */
-    private static final String BROKER_LIST = "zorkdata-91:9092,zorkdata-92:9092,zorkdata-95:9092";
+//    private static final String BROKER_LIST = "zorkdata224:9092";
+    private static final String BROKER_LIST = "kafka04.dsjkaifa.com:9092,kafka05.dsjkaifa.com:9092,kafka06.dsjkaifa.com:9092";
 //    private static final String BROKER_LIST = "zorkdata-154:9092,zorkdata-150:9092,zorkdata-156:9092";
 
     /**
@@ -45,6 +46,16 @@ public class ZorkAvroProducer {
 
 
     private static KafkaProducer<String, byte[]> producer = null;
+
+    private static boolean KAFKA_KERBEROS_FLAG = true;
+//    public static String KAFKA_KERBEROS_KRB5_CONF = "D:\\develop\\workspace\\code-repo\\simulation-data\\src\\main\\resources\\krb5.conf";
+    public static String KAFKA_KERBEROS_KRB5_CONF = "/zork/kerberos/krb5.conf";
+//    public static String KAFKA_KERBEROS_JAAS_CONF = "D:\\develop\\workspace\\code-repo\\simulation-data\\src\\main\\resources\\kafka_server_jaas.conf";
+    public static String KAFKA_KERBEROS_JAAS_CONF = "/zork/kerberos/jaas.conf";
+
+    public static String KAFKA_SECURITY_PROTOCOL = "SASL_PLAINTEXT";
+    public static String KAFKA_SASL_KERBEROS_SERVICE_NAME = "kafka";
+    public static String KAFKA_SASL_MECHANISM = "GSSAPI";
 
     static {
         // 1. 构造用于实例化Kaf kaProducer 的Properties 信息
@@ -61,6 +72,7 @@ public class ZorkAvroProducer {
     private static Properties initConfig() {
         Properties properties = new Properties();
 
+
         // kakfa broker 列表
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BROKER_LIST);
 
@@ -69,6 +81,13 @@ public class ZorkAvroProducer {
 //        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,"org.apache.kafka.common.serialization.ByteArraySerializer");
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, ByteArraySerializer.class.getName());
 
+        if (KAFKA_KERBEROS_FLAG) {
+            System.setProperty("java.security.krb5.conf", KAFKA_KERBEROS_KRB5_CONF);
+            System.setProperty("java.security.auth.login.config", KAFKA_KERBEROS_JAAS_CONF);
+            properties.put("security.protocol", KAFKA_SECURITY_PROTOCOL);
+            properties.put("sasl.kerberos.service.name", KAFKA_SASL_KERBEROS_SERVICE_NAME);
+            properties.put("sasl.mechanism", KAFKA_SASL_MECHANISM);
+        }
         return properties;
     }
 
@@ -153,7 +172,7 @@ public class ZorkAvroProducer {
         try {
             while (true) {
                 msg = zorkDara2Avro();
-                record = new ProducerRecord<>("avro-log", "zorklog", msg);
+                record = new ProducerRecord<>("shzq_icube_solarwind_rein", null, msg);
                 producer.send(record, new Callback() {
                     @Override
                     public void onCompletion(RecordMetadata recordMetadata, Exception e) {
