@@ -1,12 +1,9 @@
 package top.xiesen.simulation.zork;
 
-import org.apache.avro.generic.GenericRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import top.xiesen.simulation.zork.avro.AvroDeserializer;
-import top.xiesen.simulation.zork.avro.AvroDeserializerFactory;
 
 import java.util.Arrays;
 import java.util.Properties;
