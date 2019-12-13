@@ -29,7 +29,7 @@ public class StreamJob {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         /**
-         * 设置参数在 web 页面上可以查看
+         * 设置自定义参数在 web 页面上可以查看
          */
         env.getConfig().setGlobalJobParameters(params);
 
