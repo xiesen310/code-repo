@@ -18,6 +18,7 @@
     <properties>
         <jdk.version>1.8</jdk.version>
         <xiesen.security.version>1.0.0-SNAPSHOT</xiesen.security.version>
+        <swagger2.version>2.7.0</swagger2.version>
     </properties>
 
     <dependencyManagement>
