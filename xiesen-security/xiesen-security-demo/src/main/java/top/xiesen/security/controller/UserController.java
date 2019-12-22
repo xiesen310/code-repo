@@ -1,7 +1,6 @@
 package top.xiesen.security.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.data.domain.Pageable;
