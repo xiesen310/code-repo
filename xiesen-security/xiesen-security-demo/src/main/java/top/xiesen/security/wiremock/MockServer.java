@@ -20,8 +20,13 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
  */
 public class MockServer {
 
-    public static void main(String[] args) throws IOException {
-        configureFor(9999);
+    public static void main(String[] args) throws Exception {
+        /*int num = 3000;
+        MockData.generateData(num);
+        System.out.println("生产规则 " + num + " 条");
+        Thread.sleep(10 * 1000);*/
+
+        configureFor("192.168.1.95", 9999);
         /**
          * 清除之前的所有配置
          */
@@ -29,6 +34,7 @@ public class MockServer {
 
         mock("/order/1", "01");
         mock("/order/2", "02");
+        mock("/v1/alarm_rules", "alarm_rules");
 
     }
 
