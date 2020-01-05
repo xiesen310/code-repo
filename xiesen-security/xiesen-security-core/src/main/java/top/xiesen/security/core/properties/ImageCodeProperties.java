@@ -34,6 +34,6 @@ public class ImageCodeProperties {
     /**
      * 设置需要验证验证码的请求地址
      */
-    private String url;
+    private String url = "/authentication/form";
 
 }
