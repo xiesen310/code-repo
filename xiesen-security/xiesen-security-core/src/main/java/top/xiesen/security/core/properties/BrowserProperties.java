@@ -13,5 +13,6 @@ import lombok.Data;
 public class BrowserProperties {
     private String loginPage = "/xiesen-login-in.html";
     private LoginType loginType = LoginType.JSON;
+    private int rememberMeSeconds = 3600;
 
 }
