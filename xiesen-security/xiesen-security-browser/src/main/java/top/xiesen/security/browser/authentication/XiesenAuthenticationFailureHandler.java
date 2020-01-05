@@ -9,6 +9,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
+import top.xiesen.security.browser.support.SimpleResponse;
 import top.xiesen.security.core.properties.LoginType;
 import top.xiesen.security.core.properties.SecurityProperties;
 
@@ -39,10 +40,11 @@ public class XiesenAuthenticationFailureHandler extends SimpleUrlAuthenticationF
                                         HttpServletResponse response,
                                         AuthenticationException e) throws IOException, ServletException {
         logger.info("登录失败");
-        if (LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())) {
+        LoginType loginType = securityProperties.getBrowser().getLoginType();
+        if (LoginType.JSON.equals(loginType)) {
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
             response.setContentType("application/json;charset=UTF-8");
-            response.getWriter().write(objectMapper.writeValueAsString(e));
+            response.getWriter().write(objectMapper.writeValueAsString(new SimpleResponse(e.getMessage())));
         } else {
             super.onAuthenticationFailure(request, response, e);
         }
