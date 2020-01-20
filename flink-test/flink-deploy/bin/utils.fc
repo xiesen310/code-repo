@@ -1,0 +1,8 @@
+# vim:ft=sh
+#
+export FLINK_HOME=/opt/soft/flink-1.8.1
+
+cd ${BASH_SOURCE%/*} 2>/dev/null
+
+export CTRL_DIR=$(pwd)
+
