@@ -1,0 +1,14 @@
+# source 配置
+source.kafka.bootstrap.server: zorkdata-91:9092
+source.kafka.topics: log
+source.kafka.group.id: consumer-log-flink
+source.zookeeper.connect: zorkdata-91:2181
+
+# sink 配置
+sink.elasticsearch.url: "192.168.1.152:9300"
+sink.elasticsearch.cluster.name: test-cluster
+sink.elasticsearch.indexTopo: tdx=>tdx
+sink.elasticsearch.version: 5
+sink.elasticsearch.bulk.flush.max.actions: "2000"
+sink.elasticsearch.bulk.flush.max.size.mb: "500"
+sink.elasticsearch.bulk.flush.interval.ms: "3000"
