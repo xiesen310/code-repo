@@ -10,6 +10,8 @@
     <version>0.0.1</version>
     <modules>
         <module>flink-test-example</module>
+        <module>flink-kafka-connector</module>
+        <module>flink-test-common</module>
     </modules>
 
     <name>flink-test</name>
@@ -22,6 +24,7 @@
         <scala.binary.version>2.11</scala.binary.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <path.release>${basedir}/../flink-deploy</path.release>
     </properties>
 
     <dependencies>
@@ -31,13 +34,14 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
             <version>${flink.version}</version>
-            <scope>provided</scope>
+            <!--            <scope>provided</scope>-->
         </dependency>
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
             <version>${flink.version}</version>
-            <scope>provided</scope>
+            <!--            <scope>provided</scope>-->
         </dependency>
 
         <!-- Add connector dependencies here. They must be in the default scope (compile). -->
@@ -61,6 +65,13 @@
             <version>1.2.17</version>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+        </dependency>
+
     </dependencies>
 
     <!-- This profile helps to make things run out of the box in IntelliJ -->

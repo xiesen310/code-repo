@@ -13,7 +13,7 @@ public class MockData {
 
     public static void main(String[] args) {
 
-        int num = 3000;
+        int num = 300;
         generateData(num);
     }
 

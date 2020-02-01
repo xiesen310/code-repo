@@ -1,6 +1,5 @@
 package top.xiesen.simulation.zork;
 
-import kafka.security.auth.Topic;
 import org.apache.avro.hadoop.io.AvroSerializer;
 import org.apache.avro.specific.SpecificRecordBase;
 import org.apache.kafka.clients.producer.KafkaProducer;

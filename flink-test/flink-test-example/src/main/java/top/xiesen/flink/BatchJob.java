@@ -34,6 +34,11 @@ public class BatchJob {
         env.getConfig().setGlobalJobParameters(params);
 
         /**
+         * 设置参数为全局变量参数
+         */
+        env.getConfig().setGlobalJobParameters(params);
+
+        /**
          * 获取输入数据
          */
         DataSet<String> text;
