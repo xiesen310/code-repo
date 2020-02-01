@@ -1,6 +1,7 @@
-package top.xiesen.security.core.validate.code;
+package top.xiesen.security.core.validate.code.image;
 
 import lombok.Data;
+import top.xiesen.security.core.validate.code.ValidateCode;
 
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
@@ -13,25 +14,17 @@ import java.time.LocalDateTime;
  * @Date 2019/12/22 14:53
  */
 @Data
-public class ImageCode {
+public class ImageCode extends ValidateCode {
     private BufferedImage image;
-    private String code;
-    private LocalDateTime expireTime;
 
     public ImageCode(BufferedImage image, String code, int expireIn) {
+        super(code, expireIn);
         this.image = image;
-        this.code = code;
-        this.expireTime = LocalDateTime.now().plusSeconds(expireIn);
-    }
-
-    public boolean isExpired() {
-        return LocalDateTime.now().isAfter(expireTime);
     }
 
     public ImageCode(BufferedImage image, String code, LocalDateTime expireTime) {
+        super(code, expireTime);
         this.image = image;
-        this.code = code;
-        this.expireTime = expireTime;
     }
 
 }

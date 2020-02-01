@@ -1,8 +1,7 @@
 package top.xiesen.security.code;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
-import top.xiesen.security.core.validate.code.ImageCode;
+import top.xiesen.security.core.validate.code.image.ImageCode;
 import top.xiesen.security.core.validate.code.ValidateCodeGenerator;
 
 /**
@@ -15,8 +14,8 @@ import top.xiesen.security.core.validate.code.ValidateCodeGenerator;
 //@Component("imageCodeGenerator")
 public class DemoImageCodeGenerator implements ValidateCodeGenerator {
     @Override
-    public ImageCode generator(ServletWebRequest request) {
-        System.out.println("更高级的图形验证码生产代码");
+    public ImageCode generate(ServletWebRequest request) {
+        System.out.println("更高级的图形验证码生成代码");
         return null;
     }
 }

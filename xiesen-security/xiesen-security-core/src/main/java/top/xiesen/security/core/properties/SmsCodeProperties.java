@@ -10,19 +10,21 @@ import lombok.Data;
  * @Date 2020/1/5 13:29
  */
 @Data
-public class ImageCodeProperties extends SmsCodeProperties {
+public class SmsCodeProperties {
 
     /**
-     * 验证码的宽度
+     * 验证码长度
      */
-    private int width = 67;
+    private int length = 6;
 
     /**
-     * 验证码高度
+     * 验证码失效时间
      */
-    private int height = 23;
+    private int expireIn = 60;
 
-    public ImageCodeProperties() {
-        setLength(4);
-    }
+    /**
+     * 设置需要验证验证码的请求地址
+     */
+    private String url ;
+
 }

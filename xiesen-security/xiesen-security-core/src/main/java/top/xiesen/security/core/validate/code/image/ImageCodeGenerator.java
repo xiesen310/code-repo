@@ -1,10 +1,11 @@
-package top.xiesen.security.core.validate.code;
+package top.xiesen.security.core.validate.code.image;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 import top.xiesen.security.core.properties.SecurityProperties;
+import top.xiesen.security.core.validate.code.ValidateCodeGenerator;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -18,16 +19,19 @@ import java.util.Random;
  * @Date 2020/1/5 14:05
  */
 public class ImageCodeGenerator implements ValidateCodeGenerator {
+
+    /**
+     * 系统配置
+     */
     @Autowired
     private SecurityProperties securityProperties;
 
     @Override
-    public ImageCode generator(ServletWebRequest request) {
+    public ImageCode generate(ServletWebRequest request) {
         int width = ServletRequestUtils.getIntParameter(request.getRequest(), "width",
                 securityProperties.getCode().getImage().getWidth());
         int height = ServletRequestUtils.getIntParameter(request.getRequest(), "height",
                 securityProperties.getCode().getImage().getHeight());
-
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
         Graphics g = image.getGraphics();
@@ -58,7 +62,6 @@ public class ImageCodeGenerator implements ValidateCodeGenerator {
 
         return new ImageCode(image, sRand, securityProperties.getCode().getImage().getExpireIn());
     }
-
 
     /**
      * 生成随机背景条纹

@@ -1,7 +1,5 @@
 package top.xiesen.security.core.properties;
 
-import lombok.Data;
-
 /**
  * @Description 校验码验证配置
  * @className top.xiesen.security.core.properties.ValidateCodeProperties
@@ -11,6 +9,7 @@ import lombok.Data;
  */
 public class ValidateCodeProperties {
     private ImageCodeProperties image = new ImageCodeProperties();
+    private SmsCodeProperties sms = new SmsCodeProperties();
 
     public ImageCodeProperties getImage() {
         return image;
@@ -18,5 +17,13 @@ public class ValidateCodeProperties {
 
     public void setImage(ImageCodeProperties image) {
         this.image = image;
+    }
+
+    public SmsCodeProperties getSms() {
+        return sms;
+    }
+
+    public void setSms(SmsCodeProperties sms) {
+        this.sms = sms;
     }
 }
