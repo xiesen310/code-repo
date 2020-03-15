@@ -10,16 +10,17 @@ import top.xiesen.mock.kafka.utils.DateUtil;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ExecutionException;
+import java.util.Random;
 
 /**
- * @description:
- * @author: 谢森
+ * @Description
+ * @className top.xiesen.mock.kafka.mock.MockZorkMetric
+ * @Author 谢森
  * @Email xiesen@zork.com.cn
- * @time: 2020/1/17 0017 10:57
+ * @Date 2020/3/15 18:15
  */
-public class MockKafkaConnect {
-    private static String topic = "test";
+public class MockZorkMetric {
+    private static String topic = "metric";
     private static String brokerAddr = "zorkdata-95:9092";
     private static ProducerRecord<String, byte[]> producerRecord = null;
     private static KafkaProducer<String, byte[]> producer = null;
@@ -37,33 +38,26 @@ public class MockKafkaConnect {
         producer = new KafkaProducer<String, byte[]>(props);
     }
 
-    public static byte[] buildKafkaConnect() {
-
-        String logTypeName = "tc50_biz_filebeat";
+    public static byte[] buildMetric() {
+        Random random = new Random();
+        String metricSetName = "influx_cpu";
         String timestamp = DateUtil.getUTCTimeStr();
-        String source = "/opt/20191231.log";
-        String offset = String.valueOf(6322587L);
         Map<String, String> dimensions = new HashMap<>();
         dimensions.put("hostname", "localhost");
         dimensions.put("appprogramname", "tc50");
         dimensions.put("appsystem", "TXJY");
-        Map<String, Double> measures = new HashMap<>();
-        measures.put("latence", 301.0);
 
-        Map<String, String> normalFields = new HashMap<>();
-        normalFields.put("message", "成功处理");
+        Map<String, Double> metrics = new HashMap<>();
+        metrics.put("cpu_usage", random.nextDouble());
 
-//        ZorkData data = new ZorkData(logTypeName, source, offset, timestamp, measures, normalFields, dimensions);
-//        System.out.println(JSON.toJSONString(data));
-        System.out.println(timestamp);
-        AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
-        byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
+        AvroSerializer metricSerializer = AvroSerializerFactory.getMetricAvorSerializer();
+        byte[] bytes = metricSerializer.serializingMetric(metricSetName, timestamp, dimensions, metrics);
         return bytes;
     }
 
-    public static void send(String topic) throws ExecutionException, InterruptedException {
+    public static void send(String topic) {
         init();
-        byte[] req = buildKafkaConnect();
+        byte[] req = buildMetric();
         producerRecord = new ProducerRecord<String, byte[]>(
                 topic,
                 null,
@@ -73,19 +67,9 @@ public class MockKafkaConnect {
     }
 
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        int size = 1;
-        if (2 == args.length) {
-            size = Integer.valueOf(args[0]);
-            topic = args[1];
+    public static void main(String[] args) {
+        for (int i = 0; i <= 100; i++) {
+            send(topic);
         }
-        System.out.println(topic);
-        System.out.println(size);
-        long start = System.currentTimeMillis();
-            for (int i = 0; i <= 100; i++) {
-                send(topic);
-            }
-//            Thread.sleep(1000);
-        long end = System.currentTimeMillis();
     }
 }
