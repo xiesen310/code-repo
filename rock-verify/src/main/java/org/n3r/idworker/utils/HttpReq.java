@@ -9,11 +9,18 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.*;
 
+/**
+ * @author 谢森
+ */
 public class HttpReq {
     private final String baseUrl;
     private String req;
     private StringBuilder params = new StringBuilder();
+    public final char c = '&';
+    public final int OK_STATUS = 200;
+
     Logger logger = LoggerFactory.getLogger(HttpReq.class);
+
 
     public HttpReq(String baseUrl) {
         this.baseUrl = baseUrl;
@@ -29,9 +36,11 @@ public class HttpReq {
     }
 
     public HttpReq param(String name, String value) {
-        if (params.length() > 0) params.append('&');
+        if (params.length() > 0) {
+            params.append(c);
+        }
         try {
-            params.append(name).append('=').append(URLEncoder.encode(value, "UTF-8"));
+            params.append(name).append('=').append(URLEncoder.encode(value, Constants.UTF_8));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
@@ -45,16 +54,16 @@ public class HttpReq {
             http = (HttpURLConnection) new URL(baseUrl
                     + (req == null ? "" : req)
                     + (params.length() > 0 ? ("?" + params) : "")).openConnection();
-            http.setRequestProperty("Accept-Charset", "UTF-8");
+            http.setRequestProperty(Constants.ACCEPT_CHARSET, Constants.UTF_8);
             HttpURLConnection.setFollowRedirects(false);
             http.setConnectTimeout(5 * 1000);
             http.setReadTimeout(5 * 1000);
             http.connect();
 
             int status = http.getResponseCode();
-            String charset = getCharset(http.getHeaderField("Content-Type"));
+            String charset = getCharset(http.getHeaderField(Constants.CONTENT_TYPE));
 
-            if (status == 200) {
+            if (status == OK_STATUS) {
                 return readResponseBody(http, charset);
             } else {
                 logger.warn("non 200 respoonse :" + readErrorResponseBody(http, status, charset));
@@ -64,7 +73,9 @@ public class HttpReq {
             logger.error("exec error {}", e.getMessage());
             return null;
         } finally {
-            if (http != null) http.disconnect();
+            if (http != null) {
+                http.disconnect();
+            }
         }
 
     }
@@ -98,16 +109,18 @@ public class HttpReq {
     }
 
     private static String getCharset(String contentType) {
-        if (contentType == null) return "UTF-8";
+        if (contentType == null) {
+            return Constants.UTF_8;
+        }
 
         String charset = null;
-        for (String param : contentType.replace(" ", "").split(";")) {
-            if (param.startsWith("charset=")) {
-                charset = param.split("=", 2)[1];
+        for (String param : contentType.replace(Constants.STR1, Constants.STR2).split(Constants.COMMA)) {
+            if (param.startsWith(Constants.CHARSET_STR)) {
+                charset = param.split(Constants.EQUAL_SIGN, 2)[1];
                 break;
             }
         }
 
-        return charset == null ? "UTF-8" : charset;
+        return charset == null ? Constants.UTF_8 : charset;
     }
 }

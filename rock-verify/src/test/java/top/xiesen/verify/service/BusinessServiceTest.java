@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import top.xiesen.verify.exception.DatabaseInsertException;
 import top.xiesen.verify.pojo.Business;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.service.impl.BusinessServiceImpl;
 
 import java.util.Date;
@@ -43,20 +43,20 @@ public class BusinessServiceTest {
 
     @Test
     public void findAll() {
-        JSONResult<List<Business>> all = businessServiceImpl.findAll();
+        JsonResult<List<Business>> all = businessServiceImpl.findAll();
         System.out.println(all);
     }
 
     @Test
     public void findAllPaged() {
         Business business = new Business();
-        JSONResult<List<Business>> allPaged = businessServiceImpl.findAllPaged(1, 2);
+        JsonResult<List<Business>> allPaged = businessServiceImpl.findAllPaged(1, 2);
         System.out.println(allPaged);
     }
 
     @Test
     public void findById() {
-        JSONResult<Business> result = businessServiceImpl.findById("1");
+        JsonResult<Business> result = businessServiceImpl.findById("1");
         System.out.println(result);
     }
 
@@ -78,13 +78,13 @@ public class BusinessServiceTest {
     public void delete() {
         Business business = new Business();
         business.setId("191019H54T1YZ4SW");
-        JSONResult<String> result = businessServiceImpl.delete(business);
+        JsonResult<String> result = businessServiceImpl.delete(business);
         System.out.println(result.getStatus());
     }
 
     @Test
     public void deleteById() {
-        JSONResult<String> result = businessServiceImpl.deleteById("191019H54T1YZ4SW");
+        JsonResult<String> result = businessServiceImpl.deleteById("191019H54T1YZ4SW");
         System.out.println(result.getMsg());
     }
 

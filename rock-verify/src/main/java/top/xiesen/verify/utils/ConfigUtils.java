@@ -2,11 +2,12 @@ package top.xiesen.verify.utils;
 
 /**
  * 配置文件工具类
+ * @author 谢森
  */
 public class ConfigUtils {
 
     public static String getString(String value, String defaultValue) {
-        String result = value == null || value.equals("") || value.equals("null") ? defaultValue : value;
+        String result = value == null || "".equals(value) || "null".equals(value) ? defaultValue : value;
         return result;
     }
 

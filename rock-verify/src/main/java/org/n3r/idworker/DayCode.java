@@ -2,6 +2,9 @@ package org.n3r.idworker;
 
 import org.n3r.idworker.strategy.DayPrefixRandomCodeStrategy;
 
+/**
+ * @author 谢森
+ */
 public class DayCode {
     static RandomCodeStrategy strategy;
 

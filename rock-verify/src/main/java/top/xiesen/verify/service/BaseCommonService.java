@@ -1,17 +1,22 @@
 package top.xiesen.verify.service;
 
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @param <T>
+ * @param <ID>
+ * @author 谢森
+ */
 public interface BaseCommonService<T, ID extends Serializable> {
 
     /**
      * 保存数据
      *
      * @param dto
-     * @return
+     * @throws Exception
      */
     void save(T dto) throws Exception;
 
@@ -21,7 +26,7 @@ public interface BaseCommonService<T, ID extends Serializable> {
      * @param dto
      * @return
      */
-    JSONResult<ID> delete(T dto);
+    JsonResult<ID> delete(T dto);
 
     /**
      * 根据 id 删除数据
@@ -29,14 +34,16 @@ public interface BaseCommonService<T, ID extends Serializable> {
      * @param id
      * @return
      */
-    JSONResult<ID> deleteById(ID id);
+    JsonResult<ID> deleteById(ID id);
+
 
     /**
      * 更新数据
      *
      * @param dto
+     * @return
      */
-    JSONResult update(T dto);
+    JsonResult update(T dto);
 
     /**
      * 根据 id 查询数据
@@ -44,14 +51,14 @@ public interface BaseCommonService<T, ID extends Serializable> {
      * @param id
      * @return
      */
-    JSONResult<T> findById(ID id);
+    JsonResult<T> findById(ID id);
 
     /**
      * 查询所有
      *
      * @return
      */
-    JSONResult<List<T>> findAll();
+    JsonResult<List<T>> findAll();
 
     /**
      * 分页查询所有
@@ -60,6 +67,6 @@ public interface BaseCommonService<T, ID extends Serializable> {
      * @param pageSize
      * @return
      */
-    JSONResult<List<T>> findAllPaged(Integer page, Integer pageSize);
+    JsonResult<List<T>> findAllPaged(Integer page, Integer pageSize);
 
 }

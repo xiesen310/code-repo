@@ -2,6 +2,9 @@ package top.xiesen.verify.pojo;
 
 import javax.persistence.*;
 
+/**
+ * @author 谢森
+ */
 @Table(name = "sys_user")
 public class SysUser {
     @Id

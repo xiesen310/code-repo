@@ -1,6 +1,6 @@
 package top.xiesen.verify.service;
 
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 
 import java.util.Map;
 
@@ -16,14 +16,15 @@ public interface LogService {
      * 发送日志数据
      *
      * @param logJson 日志
-     * @return JSONResult {@link JSONResult}
+     * @return JSONResult {@link JsonResult}
      */
-    JSONResult putLog(String logJson);
+    JsonResult putLog(String logJson);
 
     /**
      * 发送 json 数据
      *
-     * @return JSONResult {@link JSONResult}
+     * @param map
+     * @return JSONResult {@link JsonResult}
      */
-    JSONResult putData(Map<String, String> map);
+    JsonResult putData(Map<String, String> map);
 }

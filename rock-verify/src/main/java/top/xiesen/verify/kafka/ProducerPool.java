@@ -1,18 +1,24 @@
 package top.xiesen.verify.kafka;
 
+/**
+ * @author 谢森
+ */
 public class ProducerPool implements Cloneable {
     private Producer[] pool;
     private int threadNum = 15;
-    // 轮循id
+    /**
+     * 轮循id
+     */
     private int index = 0;
+    int maxNum = 65535;
 
-    private static ProducerPool _interance = null;
+    private static ProducerPool instance = null;
 
     public static ProducerPool getInstance() {
-        if (_interance == null) {
-            _interance = new ProducerPool();
+        if (instance == null) {
+            instance = new ProducerPool();
         }
-        return _interance;
+        return instance;
     }
 
     private ProducerPool() {
@@ -30,11 +36,10 @@ public class ProducerPool implements Cloneable {
     }
 
     public Producer getProducer() {
-        if (index > 65535) {
+        if (index > maxNum) {
             index = 0;
         }
         return pool[index++ % threadNum];
     }
-
 
 }

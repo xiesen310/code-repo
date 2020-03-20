@@ -13,6 +13,9 @@ import java.util.ArrayDeque;
 import java.util.BitSet;
 import java.util.Queue;
 
+/**
+ * @author 谢森
+ */
 public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
     public static final int MAX_BITS = 1000000;
 
@@ -35,9 +38,11 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
     @Override
     public void init() {
         release();
-
-        while (++prefixIndex < 1000) {
-            if (tryUsePrefix()) return;
+        int size = 1000;
+        while (++prefixIndex < size) {
+            if (tryUsePrefix()) {
+                return;
+            }
         }
 
         throw new RuntimeException("all prefixes are used up, the world maybe ends!");
@@ -56,9 +61,15 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
     protected boolean tryUsePrefix() {
         codePrefixIndex = new File(idWorkerHome, Id.getWorkerId() + ".code.prefix." + prefixIndex);
 
-        if (!createPrefixIndexFile()) return false;
-        if (!createFileLock()) return false;
-        if (!createBloomFilter()) return false;
+        if (!createPrefixIndexFile()) {
+            return false;
+        }
+        if (!createFileLock()) {
+            return false;
+        }
+        if (!createBloomFilter()) {
+            return false;
+        }
 
         log.info("get available prefix index file {}", codePrefixIndex);
 
@@ -66,7 +77,9 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
     }
 
     private boolean createFileLock() {
-        if (fileLock != null) fileLock.destroy();
+        if (fileLock != null) {
+            fileLock.destroy();
+        }
         fileLock = new FileLock(codePrefixIndex);
         return fileLock.tryLock();
     }
@@ -75,7 +88,8 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
         codesFilter = fileLock.readObject();
         if (codesFilter == null) {
             log.info("create new bloom filter");
-            codesFilter = new BitSet(MAX_BITS); // 2^24
+            // 2^24
+            codesFilter = new BitSet(MAX_BITS);
         } else {
             int size = codesFilter.cardinality();
             if (size >= MAX_BITS) {
@@ -120,7 +134,9 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
 
     @Override
     public int next() {
-        if (availableCodes.isEmpty()) generate();
+        if (availableCodes.isEmpty()) {
+            generate();
+        }
 
         return availableCodes.poll();
     }
@@ -135,8 +151,9 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
     }
 
     private void generate() {
-        for (int i = 0; i < CACHE_CODES_NUM; ++i)
+        for (int i = 0; i < CACHE_CODES_NUM; ++i) {
             availableCodes.add(generateOne());
+        }
 
         fileLock.writeObject(codesFilter);
     }
@@ -147,7 +164,9 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
             boolean existed = contains(code);
 
             code = !existed ? add(code) : tryFindAvailableCode(code);
-            if (code >= 0) return code;
+            if (code >= 0) {
+                return code;
+            }
 
             init();
         }
@@ -155,10 +174,14 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
 
     private int tryFindAvailableCode(int code) {
         int next = codesFilter.nextClearBit(code);
-        if (next != -1 && next < max(maxRandomSize)) return add(next);
+        if (next != -1 && next < max(maxRandomSize)) {
+            return add(next);
+        }
 
         next = codesFilter.previousClearBit(code);
-        if (next != -1) return add(next);
+        if (next != -1) {
+            return add(next);
+        }
 
         return -1;
     }
@@ -175,9 +198,9 @@ public class DefaultRandomCodeStrategy implements RandomCodeStrategy {
 
     private int max(int size) {
         switch (size) {
-            case 1: // fall through
-            case 2: // fall through
-            case 3: // fall through
+            case 1:
+            case 2:
+            case 3:
             case 4:
                 return 10000;
             case 5:

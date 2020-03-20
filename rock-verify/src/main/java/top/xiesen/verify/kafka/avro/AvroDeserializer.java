@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 反序列化
+ *
+ * @author 谢森
  */
 public class AvroDeserializer {
 

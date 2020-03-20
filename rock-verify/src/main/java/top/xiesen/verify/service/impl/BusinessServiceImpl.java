@@ -8,12 +8,15 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 import top.xiesen.verify.mapper.BusinessMapper;
 import top.xiesen.verify.pojo.Business;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.service.BusinessService;
 import top.xiesen.verify.utils.StringUtils;
 
 import java.util.List;
 
+/**
+ * @author 谢森
+ */
 @Service
 public class BusinessServiceImpl implements BusinessService {
     @Autowired
@@ -32,7 +35,7 @@ public class BusinessServiceImpl implements BusinessService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult<String> delete(Business dto) {
+    public JsonResult<String> delete(Business dto) {
         String id = null;
         if (dto != null) {
             id = dto.getId();
@@ -40,60 +43,60 @@ public class BusinessServiceImpl implements BusinessService {
 
         if (id != null) {
             businessMapper.deleteByPrimaryKey(id);
-            return JSONResult.ok(id);
+            return JsonResult.ok(id);
         } else {
-            return JSONResult.errorMsg("Business id 不存在");
+            return JsonResult.errorMsg("Business id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult<String> deleteById(String id) {
+    public JsonResult<String> deleteById(String id) {
         if (id != null) {
             businessMapper.deleteByPrimaryKey(id);
-            return JSONResult.ok(id);
+            return JsonResult.ok(id);
         } else {
-            return JSONResult.errorMsg("Business id 不存在");
+            return JsonResult.errorMsg("Business id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult update(Business dto) {
+    public JsonResult update(Business dto) {
         try {
             String id = dto.getId();
             if (StringUtils.isEmpty(id)) {
-                return JSONResult.errorMsg("更新数据 id 不存在");
+                return JsonResult.errorMsg("更新数据 id 不存在");
             } else {
                 businessMapper.updateByPrimaryKeySelective(dto);
-                return JSONResult.ok();
+                return JsonResult.ok();
             }
         } catch (Exception e) {
-            return JSONResult.errorMsg("更新 Business 数据失败");
+            return JsonResult.errorMsg("更新 Business 数据失败");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<Business> findById(String id) {
+    public JsonResult<Business> findById(String id) {
         if (id != null) {
-            return JSONResult.ok(businessMapper.selectByPrimaryKey(id));
+            return JsonResult.ok(businessMapper.selectByPrimaryKey(id));
         } else {
-            return JSONResult.errorMsg("Business id 不存在");
+            return JsonResult.errorMsg("Business id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<Business>> findAll() {
+    public JsonResult<List<Business>> findAll() {
         Example example = new Example(Business.class);
         List<Business> businessList = businessMapper.selectByExample(example);
-        return JSONResult.ok(businessList);
+        return JsonResult.ok(businessList);
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<Business>> findAllPaged(Integer page, Integer pageSize) {
+    public JsonResult<List<Business>> findAllPaged(Integer page, Integer pageSize) {
         // 开始分页
         PageHelper.startPage(page, pageSize);
 
@@ -102,23 +105,23 @@ public class BusinessServiceImpl implements BusinessService {
 
         example.orderBy("createTime").desc();
         List<Business> businessList = businessMapper.selectByExample(example);
-        return JSONResult.ok(businessList);
+        return JsonResult.ok(businessList);
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult saveBusiness(Business business) {
+    public JsonResult saveBusiness(Business business) {
         if (business != null) {
             String sysName = business.getSysName();
             List<Business> businessList = findBusinessBySysName(sysName);
             if (businessList.size() <= 0) {
                 save(business);
-                return JSONResult.ok(sysName + "插入成功");
+                return JsonResult.ok(sysName + "插入成功");
             } else {
-                return JSONResult.errorMsg(sysName + " 已存在,插入 Business 失败");
+                return JsonResult.errorMsg(sysName + " 已存在,插入 Business 失败");
             }
         } else {
-            return JSONResult.errorMsg("business 对象为空,插入 Business 失败");
+            return JsonResult.errorMsg("business 对象为空,插入 Business 失败");
         }
     }
 

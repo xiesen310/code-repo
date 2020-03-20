@@ -1,13 +1,12 @@
 package top.xiesen.verify.kafka;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.pojo.KafkaTopicBean;
 import top.xiesen.verify.pojo.ZookeeperBean;
 
@@ -32,7 +31,7 @@ public class KafkaAdminTest {
         topicBean.setTopicName("test1");
         topicBean.setReplication(1);
         topicBean.setPartition(1);
-        JSONResult kafkaTopic = kafkaAdmin.createKafkaTopic(topicBean);
+        JsonResult kafkaTopic = kafkaAdmin.createKafkaTopic(topicBean);
         System.out.println(kafkaTopic);
     }
 
@@ -43,14 +42,14 @@ public class KafkaAdminTest {
 
     @Test
     public void listKafkaTopic() {
-        JSONResult<List<String>> listJSONResult = kafkaAdmin.listKafkaTopic();
+        JsonResult<List<String>> listJSONResult = kafkaAdmin.listKafkaTopic();
         List<String> resultData = (List<String>) listJSONResult.getData();
         resultData.forEach((list) -> System.out.println(list));
     }
 
     @Test
     public void deleteKafkaTopic() {
-        JSONResult deleteKafkaTopic = kafkaAdmin.deleteKafkaTopic("test1");
+        JsonResult deleteKafkaTopic = kafkaAdmin.deleteKafkaTopic("test1");
         System.out.println(deleteKafkaTopic);
     }
 

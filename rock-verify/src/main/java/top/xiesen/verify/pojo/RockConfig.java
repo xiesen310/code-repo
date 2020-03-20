@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * rockConfig.properties 配置文件映射
+ * @author 谢森
  */
 @Component
 @PropertySource(value = "classpath:rockConfig.properties", encoding = "UTF-8")

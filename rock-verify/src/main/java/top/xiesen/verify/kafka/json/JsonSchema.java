@@ -13,6 +13,8 @@ import java.util.Iterator;
 
 /**
  * JsonSchema
+ *
+ * @author 谢森
  */
 public class JsonSchema {
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonSchema.class);

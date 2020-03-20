@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Future;
 
+/**
+ * @author 谢森
+ */
 @Component
 public class AsyncTask {
     @Async

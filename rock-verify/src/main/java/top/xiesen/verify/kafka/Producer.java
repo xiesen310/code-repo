@@ -11,6 +11,9 @@ import top.xiesen.verify.utils.StringUtils;
 
 import java.util.Properties;
 
+/**
+ * @author 谢森
+ */
 public class Producer {
     private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
 

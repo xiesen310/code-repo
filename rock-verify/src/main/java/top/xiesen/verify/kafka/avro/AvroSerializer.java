@@ -21,6 +21,8 @@ import java.util.Map;
 
 /**
  * avro 序列化
+ *
+ * @author 谢森
  */
 public class AvroSerializer {
     private static final Logger LOGGER = LoggerFactory.getLogger(AvroSerializer.class);
@@ -67,7 +69,7 @@ public class AvroSerializer {
         for (int i = 0; i < filedsArrayList.size(); i++) {
             datum.put(filedsArrayList.get(i), temtuple.get(i));
         }
-        
+
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         // DatumWriter 将数据对象翻译成Encoder对象可以理解的类型
         DatumWriter<GenericRecord> write = new GenericDatumWriter<GenericRecord>(this.schema);
@@ -104,8 +106,8 @@ public class AvroSerializer {
      * @return
      */
     private synchronized byte[] serializing(String json) {
-        byte[] returnstr = null;
-        JSONObject jsonObject = (JSONObject) JSONObject.parse(json);// new TypeReference<Object>() {}
+        byte[] returnStr = null;
+        JSONObject jsonObject = (JSONObject) JSONObject.parse(json);
         GenericRecord datum = new GenericData.Record(this.schema);
         // 将数据加到datum中
         for (int i = 0; i < filedsArrayList.size(); i++) {
@@ -132,11 +134,11 @@ public class AvroSerializer {
             }
         }
         try {
-            returnstr = out.toByteArray();
+            returnStr = out.toByteArray();
         } catch (Exception e) {
             LOGGER.error("序列化失败", e);
         }
-        return returnstr;
+        return returnStr;
     }
 
     /**
@@ -146,7 +148,7 @@ public class AvroSerializer {
      * @return
      */
     private synchronized byte[] serializing(JSONObject jsonObject) {
-        byte[] returnstr = null;
+        byte[] returnStr = null;
         GenericRecord datum = new GenericData.Record(this.schema);
         // 将数据加到datum中
         for (int i = 0; i < filedsArrayList.size(); i++) {
@@ -173,18 +175,18 @@ public class AvroSerializer {
             }
         }
         try {
-            returnstr = out.toByteArray();
+            returnStr = out.toByteArray();
         } catch (Exception e) {
             LOGGER.error("序列化失败", e);
         }
-        return returnstr;
+        return returnStr;
     }
 
     /**
      * 序列化对象
      */
     public synchronized byte[] serializing(GenericRecord datum) {
-        byte[] returnstr = null;
+        byte[] returnStr = null;
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         // DatumWriter 将数据对象翻译成Encoder对象可以理解的类型
@@ -207,13 +209,13 @@ public class AvroSerializer {
             }
         }
         try {
-            returnstr = out.toByteArray();
+            returnStr = out.toByteArray();
         } catch (Exception e) {
             LOGGER.error("序列化失败", e);
         }
 
         // GenericRecord s = AvroDeserializerFactory.getTopicmetadataDeserializer().deserializing(returnstr);
-        return returnstr;
+        return returnStr;
     }
 
     /**
@@ -249,7 +251,7 @@ public class AvroSerializer {
     }
 
     private synchronized byte[] serializing(GenericRecord genericRecord, String key[]) {
-        byte[] returnstr = null;
+        byte[] returnStr = null;
         GenericRecord datum = new GenericData.Record(this.schema);
         // 将数据加到datum中
         for (int i = 0; i < filedsArrayList.size(); i++) {
@@ -277,10 +279,10 @@ public class AvroSerializer {
             }
         }
         try {
-            returnstr = out.toByteArray();
+            returnStr = out.toByteArray();
         } catch (Exception e) {
             LOGGER.error("序列化失败", e);
         }
-        return returnstr;
+        return returnStr;
     }
 }

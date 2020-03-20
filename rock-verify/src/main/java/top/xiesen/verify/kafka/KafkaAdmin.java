@@ -8,8 +8,7 @@ import kafka.utils.ZkUtils;
 import org.apache.kafka.common.security.JaasUtils;
 import scala.collection.JavaConversions;
 import scala.collection.Map;
-import scala.collection.Set;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.pojo.KafkaTopicBean;
 import top.xiesen.verify.pojo.ZookeeperBean;
 import top.xiesen.verify.utils.ConfigUtils;
@@ -22,6 +21,8 @@ import java.util.Properties;
 
 /**
  * KafkaAdmin
+ *
+ * @author 谢森
  */
 public class KafkaAdmin {
     ZkUtils zkUtils = null;
@@ -39,19 +40,19 @@ public class KafkaAdmin {
      * @param kafkaTopicBean
      * @return JSONResult
      */
-    public JSONResult createKafkaTopic(KafkaTopicBean kafkaTopicBean) {
+    public JsonResult createKafkaTopic(KafkaTopicBean kafkaTopicBean) {
         if (!topicExists(kafkaTopicBean.getTopicName())) {
             try {
                 AdminUtils.createTopic(zkUtils, kafkaTopicBean.getTopicName(), kafkaTopicBean.getPartition(),
                         kafkaTopicBean.getReplication(), new Properties(), new RackAwareMode.Enforced$());
-                return JSONResult.ok("创建 " + kafkaTopicBean.getTopicName() + " 成功");
+                return JsonResult.ok("创建 " + kafkaTopicBean.getTopicName() + " 成功");
             } catch (Exception e) {
-                return JSONResult.errorMsg("创建 " + kafkaTopicBean.getTopicName() + " 失败");
+                return JsonResult.errorMsg("创建 " + kafkaTopicBean.getTopicName() + " 失败");
             } finally {
                 zkUtils.close();
             }
         } else {
-            return JSONResult.errorMsg("创建 " + kafkaTopicBean.getTopicName() + " 失败");
+            return JsonResult.errorMsg("创建 " + kafkaTopicBean.getTopicName() + " 失败");
         }
     }
 
@@ -72,16 +73,16 @@ public class KafkaAdmin {
      *
      * @return List<String>
      */
-    public JSONResult<List<String>> listKafkaTopic() {
+    public JsonResult<List<String>> listKafkaTopic() {
         List<String> allTopicList = new ArrayList<>();
         try {
             allTopicList = JavaConversions.seqAsJavaList(zkUtils.getAllTopics());
         } catch (Exception e) {
-            return JSONResult.errorMsg("获取 kafka topic 列表失败");
+            return JsonResult.errorMsg("获取 kafka topic 列表失败");
         } finally {
             zkUtils.close();
         }
-        return JSONResult.ok(allTopicList);
+        return JsonResult.ok(allTopicList);
     }
 
     /**
@@ -89,16 +90,16 @@ public class KafkaAdmin {
      *
      * @param topicName
      */
-    public JSONResult deleteKafkaTopic(String topicName) {
+    public JsonResult deleteKafkaTopic(String topicName) {
         try {
             if (topicExists(topicName)) {
                 AdminUtils.deleteTopic(zkUtils, topicName);
-                return JSONResult.ok("删除 " + topicName + " 成功");
+                return JsonResult.ok("删除 " + topicName + " 成功");
             } else {
-                return JSONResult.errorMsg("删除失败, " + topicName + " 不存在");
+                return JsonResult.errorMsg("删除失败, " + topicName + " 不存在");
             }
         } catch (Exception e) {
-            return JSONResult.errorMsg("删除 " + topicName + " 失败");
+            return JsonResult.errorMsg("删除 " + topicName + " 失败");
         } finally {
             zkUtils.close();
         }
@@ -111,7 +112,9 @@ public class KafkaAdmin {
      * @return
      */
     public String[] deleteKafkaTopics(final String... topicNames) {
-        if (topicNames == null || topicNames.length == 0) return new String[0];
+        if (topicNames == null || topicNames.length == 0) {
+            return new String[0];
+        }
         java.util.Set<String> deleted = new LinkedHashSet<String>();
         for (String topicName : topicNames) {
             if (topicName != null || !topicName.trim().isEmpty()) {

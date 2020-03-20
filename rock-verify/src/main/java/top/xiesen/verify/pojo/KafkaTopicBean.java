@@ -4,12 +4,30 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author 谢森
+ */
 @Getter
 @Setter
 @ToString
 public class KafkaTopicBean {
-    private String topicName;       // topic 名称
-    private Integer partition;      // partition 分区数量
-    private Integer replication;    // replication 副本数量
-    private String description;     //描述信息
+    /**
+     * topic 名称
+     */
+    private String topicName;
+
+    /**
+     * partition 分区数量
+     */
+    private Integer partition;
+
+    /**
+     * replication 副本数量
+     */
+    private Integer replication;
+
+    /**
+     * 描述信息
+     */
+    private String description;
 }

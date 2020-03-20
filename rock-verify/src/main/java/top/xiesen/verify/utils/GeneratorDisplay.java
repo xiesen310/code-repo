@@ -7,6 +7,10 @@ import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
+
+/**
+ * @author 谢森
+ */
 public class GeneratorDisplay {
     public void generator() throws Exception{
 

@@ -7,13 +7,16 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 import top.xiesen.verify.mapper.SysUserMapper;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.pojo.SysUser;
 import top.xiesen.verify.service.SysUserService;
 import top.xiesen.verify.utils.StringUtils;
 
 import java.util.List;
 
+/**
+ * @author 谢森
+ */
 @Service
 public class SysUserServiceImpl implements SysUserService {
     @Autowired
@@ -27,67 +30,67 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult<String> delete(SysUser dto) {
+    public JsonResult<String> delete(SysUser dto) {
         String id = null;
         if (dto != null) {
             id = dto.getId();
         }
         if (id != null) {
             userMapper.deleteByPrimaryKey(id);
-            return JSONResult.ok(id);
+            return JsonResult.ok(id);
         } else {
-            return JSONResult.errorMsg("SysUser id 不存在");
+            return JsonResult.errorMsg("SysUser id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult<String> deleteById(String id) {
+    public JsonResult<String> deleteById(String id) {
         if (id != null) {
             userMapper.deleteByPrimaryKey(id);
-            return JSONResult.ok(id);
+            return JsonResult.ok(id);
         } else {
-            return JSONResult.errorMsg("SysUser id 不存在");
+            return JsonResult.errorMsg("SysUser id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public JSONResult update(SysUser dto) {
+    public JsonResult update(SysUser dto) {
         try {
             String id = dto.getId();
             if (StringUtils.isEmpty(id)) {
-                return JSONResult.errorMsg("更新数据 id 不存在");
+                return JsonResult.errorMsg("更新数据 id 不存在");
             } else {
                 userMapper.updateByPrimaryKeySelective(dto);
-                return JSONResult.ok();
+                return JsonResult.ok();
             }
         } catch (Exception e) {
-            return JSONResult.errorMsg("更新 SysUser 数据失败");
+            return JsonResult.errorMsg("更新 SysUser 数据失败");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<SysUser> findById(String id) {
+    public JsonResult<SysUser> findById(String id) {
         if (id != null) {
-            return JSONResult.ok(userMapper.selectByPrimaryKey(id));
+            return JsonResult.ok(userMapper.selectByPrimaryKey(id));
         } else {
-            return JSONResult.errorMsg("SysUser id 不存在");
+            return JsonResult.errorMsg("SysUser id 不存在");
         }
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<SysUser>> findAll() {
+    public JsonResult<List<SysUser>> findAll() {
         Example example = new Example(SysUser.class);
         List<SysUser> userList = userMapper.selectByExample(example);
-        return JSONResult.ok(userList);
+        return JsonResult.ok(userList);
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public JSONResult<List<SysUser>> findAllPaged(Integer page, Integer pageSize) {
+    public JsonResult<List<SysUser>> findAllPaged(Integer page, Integer pageSize) {
         // 开始分页
         PageHelper.startPage(page, pageSize);
 
@@ -95,6 +98,6 @@ public class SysUserServiceImpl implements SysUserService {
         Example.Criteria criteria = example.createCriteria();
 
         List<SysUser> businessList = userMapper.selectByExample(example);
-        return JSONResult.ok(businessList);
+        return JsonResult.ok(businessList);
     }
 }

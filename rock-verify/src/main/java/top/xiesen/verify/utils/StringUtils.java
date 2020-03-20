@@ -1,8 +1,5 @@
 package top.xiesen.verify.utils;
 
-import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
-import net.sf.jsqlparser.expression.DateTimeLiteralExpression.DateTime;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -10,6 +7,8 @@ import java.util.regex.Pattern;
 
 /**
  * 字符串工具类
+ *
+ * @author 谢森
  */
 public class StringUtils {
     /**
@@ -46,12 +45,12 @@ public class StringUtils {
     }
 
     public static boolean isNull(String str) {
-        if (str == null) {
+        if (null == str) {
             return true;
         }
         str = str.trim();
 
-        return str.equals("") || str.equalsIgnoreCase("NULL");
+        return "".equals(str) || str.equalsIgnoreCase("NULL");
     }
 
     public static boolean isDouble(String str) {
@@ -74,7 +73,7 @@ public class StringUtils {
         str = str.trim();
         try {
             return Double.valueOf(str);
-        } catch (Exception Ex) {
+        } catch (Exception ex) {
             return null;
         }
     }
@@ -91,7 +90,7 @@ public class StringUtils {
         str = str.trim();
         try {
             return Long.valueOf(str);
-        } catch (Exception Ex) {
+        } catch (Exception ex) {
             return defaultValue;
         }
     }
@@ -103,7 +102,7 @@ public class StringUtils {
         str = str.trim();
         try {
             return Integer.valueOf(str);
-        } catch (Exception Ex) {
+        } catch (Exception ex) {
             return defaultValue;
         }
     }

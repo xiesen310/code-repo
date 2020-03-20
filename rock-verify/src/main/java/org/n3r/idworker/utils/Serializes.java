@@ -5,6 +5,9 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author 谢森
+ */
 public class Serializes {
 
     @SuppressWarnings("unchecked")
@@ -15,8 +18,9 @@ public class Serializes {
         try {
             fis = new FileInputStream(file);
             objectReader = new ObjectInputStream(fis);
-            while (true)
+            while (true) {
                 objects.add((T) objectReader.readObject());
+            }
 
         } catch (EOFException e) {
         } catch (Exception e) {
@@ -67,7 +71,10 @@ public class Serializes {
 
     public static void writeObject(FileOutputStream fos, Object object) {
         FileChannel channel = fos.getChannel();
-        if (!channel.isOpen()) throw new RuntimeException("channel is closed");
+        if (!channel.isOpen()) {
+            String errorMsg = "channel is closed";
+            throw new RuntimeException(errorMsg);
+        }
 
         try {
             channel.position(0);
@@ -87,8 +94,9 @@ public class Serializes {
             fos = new FileOutputStream(file);
             objectOutput = new ObjectOutputStream(fos);
 
-            for (Object object : objects)
+            for (Object object : objects) {
                 objectOutput.writeObject(object);
+            }
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
@@ -99,20 +107,23 @@ public class Serializes {
     }
 
     public static void closeQuietly(OutputStream os) {
-        if (os != null) try {
-            os.close();
-        } catch (IOException e) {
-            // ignore
+        if (os != null) {
+            try {
+                os.close();
+            } catch (IOException e) {
+                // ignore
+            }
         }
     }
 
 
     public static void closeQuietly(InputStream is) {
-        if (is != null) try {
-            is.close();
-        } catch (IOException e) {
-            // ignore
+        if (is != null) {
+            try {
+                is.close();
+            } catch (IOException e) {
+                // ignore
+            }
         }
-
     }
 }

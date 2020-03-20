@@ -2,6 +2,8 @@ package top.xiesen.verify.kafka.avro;
 
 /**
  * AvroFactory
+ *
+ * @author 谢森
  */
 public class AvroFactory {
     /**

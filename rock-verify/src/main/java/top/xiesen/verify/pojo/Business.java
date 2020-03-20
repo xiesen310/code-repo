@@ -3,6 +3,9 @@ package top.xiesen.verify.pojo;
 import java.util.Date;
 import javax.persistence.*;
 
+/**
+ * @author 谢森
+ */
 public class Business {
     /**
      * id

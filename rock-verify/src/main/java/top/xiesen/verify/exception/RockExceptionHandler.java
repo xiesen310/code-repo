@@ -7,6 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author 谢森
+ */
+
 @ControllerAdvice
 public class RockExceptionHandler {
     private static final String ROCK_ERROR_VIEW = "error";

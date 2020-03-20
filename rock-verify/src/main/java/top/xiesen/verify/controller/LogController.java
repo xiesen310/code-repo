@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import top.xiesen.verify.pojo.JSONResult;
+import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.pojo.LogEvent;
 import top.xiesen.verify.service.LogService;
 
@@ -32,13 +32,13 @@ public class LogController {
 
     @ApiOperation("发送日志")
     @RequestMapping(value = "/putLog", method = RequestMethod.POST)
-    public JSONResult putLog(@Valid @RequestBody LogEvent logEvent) {
+    public JsonResult putLog(@Valid @RequestBody LogEvent logEvent) {
         return logService.putLog(JSON.toJSONString(logEvent));
     }
 
     @ApiOperation("发送日志")
     @RequestMapping(value = "/putData", method = RequestMethod.POST)
-    public JSONResult putData(@RequestBody Map<String, String> map) {
+    public JsonResult putData(@RequestBody Map<String, String> map) {
         return logService.putData(map);
     }
 
