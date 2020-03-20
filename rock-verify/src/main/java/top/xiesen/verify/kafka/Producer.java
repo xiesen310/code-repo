@@ -16,7 +16,7 @@ public class Producer {
 
     static Producer producer;
 
-    static String servers = "192.168.3.101:9092";
+    static String servers = "s103:9092";
     static int batchSize = 1;
     static String topic = "test";
 
