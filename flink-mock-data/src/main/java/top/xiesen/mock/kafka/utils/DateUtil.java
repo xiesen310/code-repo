@@ -46,6 +46,9 @@ public class DateUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(getUTCTimeStr());
+//        System.out.println(getUTCTimeStr());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String today = sdf.format(new Date());
+        System.out.println(today);
     }
 }
