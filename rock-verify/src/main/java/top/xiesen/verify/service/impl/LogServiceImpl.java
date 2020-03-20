@@ -1,11 +1,14 @@
 package top.xiesen.verify.service.impl;
 
+import kafka.utils.Json;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.xiesen.verify.kafka.Producer;
 import top.xiesen.verify.kafka.ProducerPool;
 import top.xiesen.verify.kafka.json.JsonSchema;
 import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.service.LogService;
+import top.xiesen.verify.service.RockLogStructService;
 
 import java.util.Map;
 
@@ -20,6 +23,9 @@ import java.util.Map;
 public class LogServiceImpl implements LogService {
     private Producer producer = ProducerPool.getInstance().getProducer();
 
+    @Autowired
+    private RockLogStructService rockLogStructService;
+
     @Override
     public JsonResult putLog(String logJson) {
         try {
@@ -33,7 +39,21 @@ public class LogServiceImpl implements LogService {
     @Override
     public JsonResult putData(Map<String, String> map) {
         String jsonData = map.get("data");
+        if (null == jsonData) {
+            return JsonResult.errorMsg("data 不能为空");
+        }
         String jsonSchema = map.get("schema");
+
+        if (null == jsonSchema) {
+            String id = map.get("id");
+            String logStruct = rockLogStructService.findLogStructById(id);
+            if (null == logStruct) {
+                return JsonResult.errorMsg("schema 不存在");
+            } else {
+                jsonSchema = logStruct;
+            }
+        }
+
         boolean flag = JsonSchema.check(jsonSchema, jsonData);
 
         if (flag) {
