@@ -1,6 +1,5 @@
 package top.xiesen.verify.service;
 
-import top.xiesen.verify.pojo.Business;
 import top.xiesen.verify.pojo.JsonResult;
 import top.xiesen.verify.pojo.RockLogStruct;
 
@@ -38,4 +37,9 @@ public interface RockLogStructService extends BaseCommonService<RockLogStruct, S
      * @return
      */
     String findLogStructById(String id);
+
+    /**
+     * 将 mysql 中的日志集同步到 redis 中
+     */
+    void mysql2redis();
 }

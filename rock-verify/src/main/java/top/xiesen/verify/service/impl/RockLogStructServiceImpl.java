@@ -189,4 +189,25 @@ public class RockLogStructServiceImpl implements RockLogStructService {
         }
         return null;
     }
+
+    /**
+     * 将 mysql 中的日志集数据同步到 redis 中
+     * 1. 从 mysql 中获取全量的 日志结构数据，然后将数据写入到 redis 中
+     */
+    public void mysql2redis() {
+        Example example = new Example(RockLogStruct.class);
+        List<RockLogStruct> rockLogStructList = rockLogStructMapper.selectByExample(example);
+        if (null != rockLogStructList) {
+            for (RockLogStruct rockLogStruct : rockLogStructList) {
+                String id = rockLogStruct.getId();
+                String key = RockConstant.ROCK_PREFIX + id;
+                String value = searchRedis(key);
+                if (null == value) {
+                    saveRedis(key, rockLogStruct.getLogStruct());
+                }
+            }
+        }
+
+
+    }
 }

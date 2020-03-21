@@ -5,7 +5,8 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import top.xiesen.verify.pojo.RockConfig;
+import top.xiesen.verify.config.RockConfig;
+import top.xiesen.verify.constants.RockConstant;
 import top.xiesen.verify.utils.PropertiesUtil;
 import top.xiesen.verify.utils.StringUtils;
 
@@ -16,9 +17,7 @@ import java.util.Properties;
  */
 public class Producer {
     private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
-
     static Producer producer;
-
     static String servers = "s103:9092";
     static int batchSize = 1;
     static String topic = "test";
@@ -35,13 +34,12 @@ public class Producer {
 
     public Producer() {
         try {
-            initConfig();
-
             Properties props = new Properties();
-            props.put("bootstrap.servers", servers);
+
+            props.put("bootstrap.servers", RockConfig.getConfig().getProperty(RockConstant.ROCK_VERIFY_KAFKA_SERVERS));
             props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
             props.put("value.serializer", "org.apache.kafka.common.serialization.ByteArraySerializer");
-            props.put("batch.size", batchSize);
+            props.put("batch.size", StringUtils.getInt(RockConfig.getConfig().getProperty(RockConstant.ROCK_VERIFY_KAFKA_BATCH_SIZE), 100));
             avroProducer = new KafkaProducer<String, byte[]>(props);
 
             props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
@@ -54,21 +52,6 @@ public class Producer {
         }
     }
 
-    /**
-     * 初始化配置
-     */
-    public void initConfig() {
-        try {
-            Properties properties = PropertiesUtil.getProperties("/rockConfig.properties");
-            servers = properties.getProperty("rock.verify.kafka.servers");
-            topic = properties.getProperty("rock.verify.kafka.topic");
-            batchSize = StringUtils.getInt(properties.getProperty("rock.verify.kafka.batch.size"), 100);
-        } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.error("读取配置文件 rockConfig.properties 失败");
-            System.exit(1);
-        }
-    }
 
     /**
      * 发送数据
@@ -77,6 +60,7 @@ public class Producer {
      */
     public void sendLog(String logJson) {
         try {
+            topic = RockConfig.getConfig().getProperty(RockConstant.ROCK_VERIFY_KAFKA_TOPIC);
             noAvroProducer.send(new ProducerRecord<String, String>(topic, null, logJson));
         } catch (Exception e) {
             LOGGER.error("发送数据到 {} 失败,错误信息是: {}", topic, e.getMessage());

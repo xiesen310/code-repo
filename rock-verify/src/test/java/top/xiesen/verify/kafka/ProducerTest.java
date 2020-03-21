@@ -6,15 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import top.xiesen.verify.pojo.RockConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @EnableAutoConfiguration
 public class ProducerTest {
-
-    @Autowired
-    private RockConfig rockConfig;
 
     @Test
     public void sendLog() {
@@ -25,8 +21,6 @@ public class ProducerTest {
 
     @Test
     public void test1() {
-        System.out.println(rockConfig.getKafkaBatchSize());
-        System.out.println(rockConfig.getKafkaServers());
-        System.out.println(rockConfig.getKafkaTopic());
+
     }
 }
