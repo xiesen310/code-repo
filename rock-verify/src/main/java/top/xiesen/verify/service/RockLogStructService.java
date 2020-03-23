@@ -13,12 +13,12 @@ import java.util.List;
  * @Date 2020/3/20 21:49
  */
 public interface RockLogStructService extends BaseCommonService<RockLogStruct, String> {
-
     /**
      * 保存数据
      *
      * @param rockLogStruct
      * @return
+     * @throws Exception
      */
     JsonResult saveRockLogStruct(RockLogStruct rockLogStruct) throws Exception;
 
