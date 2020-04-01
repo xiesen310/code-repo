@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
  * @time: 2020/1/17 0017 10:57
  */
 public class MockKafkaConnect {
-    private static String topic = "test";
+    private static String topic = "zorkdata_log";
     private static String brokerAddr = "zorkdata-95:9092";
     private static ProducerRecord<String, byte[]> producerRecord = null;
     private static KafkaProducer<String, byte[]> producer = null;
@@ -53,39 +53,48 @@ public class MockKafkaConnect {
         Map<String, String> normalFields = new HashMap<>();
         normalFields.put("message", "成功处理");
 
-//        ZorkData data = new ZorkData(logTypeName, source, offset, timestamp, measures, normalFields, dimensions);
-//        System.out.println(JSON.toJSONString(data));
-        System.out.println(timestamp);
         AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
         byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
         return bytes;
     }
 
     public static void send(String topic) throws ExecutionException, InterruptedException {
-        init();
         byte[] req = buildKafkaConnect();
+        send(topic, req);
+    }
+
+    public static void send(String topic, byte[] msg) throws ExecutionException, InterruptedException {
+        init();
         producerRecord = new ProducerRecord<String, byte[]>(
                 topic,
                 null,
-                req
+                msg
         );
         producer.send(producerRecord);
     }
 
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        int size = 1;
-        if (2 == args.length) {
-            size = Integer.valueOf(args[0]);
-            topic = args[1];
+    public static void main(String[] args) throws Exception {
+        for (int i = 0; i <= 1000; i++) {
+            String logTypeName = "tc50_biz_filebeat";
+            String timestamp = DateUtil.getUTCTimeStr();
+            String source = "/opt/20191231.log";
+            String offset = String.valueOf(6322587L);
+            Map<String, String> dimensions = new HashMap<>();
+            dimensions.put("hostname", "localhost");
+            dimensions.put("appprogramname", "tc50");
+            dimensions.put("appsystem", "TXJY");
+            Map<String, Double> measures = new HashMap<>();
+            measures.put("latence", 301.0);
+
+            Map<String, String> normalFields = new HashMap<>();
+            normalFields.put("message", "成功处理");
+            normalFields.put("id", String.valueOf(i));
+
+            AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
+            byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
+
+            send(topic, bytes);
         }
-        System.out.println(topic);
-        System.out.println(size);
-        long start = System.currentTimeMillis();
-            for (int i = 0; i <= 100; i++) {
-                send(topic);
-            }
-//            Thread.sleep(1000);
-        long end = System.currentTimeMillis();
     }
 }

@@ -20,7 +20,7 @@ import java.util.Random;
  * @Date 2020/3/15 18:15
  */
 public class MockZorkMetric {
-    private static String topic = "metric";
+    private static String topic = "zorkdata_metric";
     private static String brokerAddr = "zorkdata-95:9092";
     private static ProducerRecord<String, byte[]> producerRecord = null;
     private static KafkaProducer<String, byte[]> producer = null;
@@ -41,7 +41,7 @@ public class MockZorkMetric {
     public static byte[] buildMetric() {
         Random random = new Random();
         String metricSetName = "influx_cpu";
-        String timestamp = DateUtil.getUTCTimeStr();
+        String timestamp = String.valueOf(System.currentTimeMillis());
         Map<String, String> dimensions = new HashMap<>();
         dimensions.put("hostname", "localhost");
         dimensions.put("appprogramname", "tc50");
@@ -67,9 +67,10 @@ public class MockZorkMetric {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i <= 100; i++) {
             send(topic);
+            Thread.sleep(1000);
         }
     }
 }
