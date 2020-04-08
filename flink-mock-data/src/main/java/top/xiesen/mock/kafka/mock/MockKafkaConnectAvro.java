@@ -1,16 +1,10 @@
 package top.xiesen.mock.kafka.mock;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.common.serialization.ByteArraySerializer;
-import top.xiesen.mock.kafka.avro.AvroSerializer;
-import top.xiesen.mock.kafka.avro.AvroSerializerFactory;
-import top.xiesen.mock.kafka.utils.DateUtil;
+import top.xiesen.mock.kafka.utils.*;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ExecutionException;
 
 /**
  * @description:
@@ -19,31 +13,23 @@ import java.util.concurrent.ExecutionException;
  * @time: 2020/1/17 0017 10:57
  */
 public class MockKafkaConnectAvro {
+    private static long getSize(String propertiesName) throws Exception {
+
+        Properties properties = PropertiesUtil.getProperties(propertiesName);
+        long logSize = StringUtil.getLong(properties.getProperty("log.size", "5000").trim(), 1);
+        return logSize;
+    }
 
     public static void main(String[] args) throws Exception {
-        int size = 1000;
-        String topic = "info";
-        String brokerAddr = "kafka-1:9092,kafka-2:9092,kafka-3:9092";
-
-        if (args.length != 3) {
-            System.out.println("请输出 topic 以及 kafka 地址");
+        long start = System.currentTimeMillis();
+        if (args.length == 0) {
+            System.out.println("请指定配置文件");
+            System.exit(-1);
         }
+        String propertiesName = args[0];
+        long size = getSize(propertiesName);
 
-        size = Integer.valueOf(args[0]);
-        topic = args[1];
-        brokerAddr = args[2];
-
-        Properties props = new Properties();
-        props.put("bootstrap.servers", brokerAddr);
-        props.put("acks", "1");
-        props.put("retries", 0);
-        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        props.put("value.serializer", ByteArraySerializer.class.getName());
-        props.put("batch.size", 16384);
-        props.put("linger.ms", 1);
-        props.put("buffer.memory", 33554432);
-
-        for (int i = 0; i <= size; i++) {
+        for (int i = 0; i < size; i++) {
             String logTypeName = "tc50_biz_filebeat";
             String timestamp = DateUtil.getUTCTimeStr();
             String source = "/opt/20191231.log";
@@ -58,18 +44,18 @@ public class MockKafkaConnectAvro {
             Map<String, String> normalFields = new HashMap<>();
             normalFields.put("message", "成功处理");
             normalFields.put("id", String.valueOf(i));
-
-            AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
-            byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
-
-            ProducerRecord<String, byte[]> producerRecord = new ProducerRecord<String, byte[]>(
-                    topic,
-                    null,
-                    bytes
-            );
-            KafkaProducer<String, byte[]> producer = new KafkaProducer<String, byte[]>(props);
-            producer.send(producerRecord);
-            producer.close();
+//            System.out.println("--------------------- start ----------------------------");
+//            long l1 = System.currentTimeMillis();
+            CustomerProducer producer = ProducerPool.getInstance(propertiesName).getProducer();
+//            long l2 = System.currentTimeMillis();
+//            System.out.println("获取 producer 需要的时间: " + (l2 - l1) + "ms");
+            producer.sendLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
+//            long l3 = System.currentTimeMillis();
+//            System.out.println("发送数据执行的时间: " + (l3 - l2) + "ms");
+//            System.out.println("--------------------- end ----------------------------");
         }
+        long end = System.currentTimeMillis();
+        Thread.sleep(5000);
+        System.out.println("写入 " + size + " 条数据,一共耗时 " + (end - start) + " ms");
     }
 }

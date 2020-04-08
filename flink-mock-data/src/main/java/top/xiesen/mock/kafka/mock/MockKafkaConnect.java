@@ -19,7 +19,8 @@ import java.util.concurrent.ExecutionException;
  * @time: 2020/1/17 0017 10:57
  */
 public class MockKafkaConnect {
-    private static String topic = "zorkdata_log";
+//    private static String topic = "zorkdata_log";
+    private static String topic = "xiesen";
     private static String brokerAddr = "zorkdata-95:9092";
     private static ProducerRecord<String, byte[]> producerRecord = null;
     private static KafkaProducer<String, byte[]> producer = null;
@@ -75,7 +76,7 @@ public class MockKafkaConnect {
 
 
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i <= 1000; i++) {
+        for (int i = 0; i <= 10000; i++) {
             String logTypeName = "tc50_biz_filebeat";
             String timestamp = DateUtil.getUTCTimeStr();
             String source = "/opt/20191231.log";
