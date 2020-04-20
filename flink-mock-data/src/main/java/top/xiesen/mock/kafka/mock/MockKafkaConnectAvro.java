@@ -1,5 +1,6 @@
 package top.xiesen.mock.kafka.mock;
 
+import com.alibaba.fastjson.JSONObject;
 import top.xiesen.mock.kafka.utils.*;
 
 import java.util.HashMap;
@@ -18,6 +19,19 @@ public class MockKafkaConnectAvro {
         Properties properties = PropertiesUtil.getProperties(propertiesName);
         long logSize = StringUtil.getLong(properties.getProperty("log.size", "5000").trim(), 1);
         return logSize;
+    }
+
+    public static String sum(String logTypeName, String timestamp, String source, String offset,
+                             Map<String, String> dimensions, Map<String, Double> metrics, Map<String, String> normalFields) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("logTypeName", logTypeName);
+        jsonObject.put("timestamp", timestamp);
+        jsonObject.put("source", source);
+        jsonObject.put("offset", offset);
+        jsonObject.put("dimensions", dimensions);
+        jsonObject.put("metrics", metrics);
+        jsonObject.put("normalFields", normalFields);
+        return jsonObject.toString();
     }
 
     public static void main(String[] args) throws Exception {
@@ -44,6 +58,7 @@ public class MockKafkaConnectAvro {
             Map<String, String> normalFields = new HashMap<>();
             normalFields.put("message", "成功处理");
             normalFields.put("id", String.valueOf(i));
+            System.out.println(sum(logTypeName, timestamp, source, offset, dimensions, measures, normalFields));
 //            System.out.println("--------------------- start ----------------------------");
 //            long l1 = System.currentTimeMillis();
             CustomerProducer producer = ProducerPool.getInstance(propertiesName).getProducer();

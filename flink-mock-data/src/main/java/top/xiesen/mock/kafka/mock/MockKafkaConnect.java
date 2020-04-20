@@ -1,8 +1,11 @@
 package top.xiesen.mock.kafka.mock;
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.ByteArrayDeserializer;
 import org.apache.kafka.common.serialization.ByteArraySerializer;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import top.xiesen.mock.kafka.avro.AvroSerializer;
 import top.xiesen.mock.kafka.avro.AvroSerializerFactory;
 import top.xiesen.mock.kafka.utils.DateUtil;
@@ -19,8 +22,8 @@ import java.util.concurrent.ExecutionException;
  * @time: 2020/1/17 0017 10:57
  */
 public class MockKafkaConnect {
-//    private static String topic = "zorkdata_log";
-    private static String topic = "xiesen";
+    //    private static String topic = "test";
+    private static String topic = "streamx_sql_source";
     private static String brokerAddr = "zorkdata-95:9092";
     private static ProducerRecord<String, byte[]> producerRecord = null;
     private static KafkaProducer<String, byte[]> producer = null;
@@ -54,6 +57,8 @@ public class MockKafkaConnect {
         Map<String, String> normalFields = new HashMap<>();
         normalFields.put("message", "成功处理");
 
+
+
         AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
         byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
         return bytes;
@@ -76,7 +81,7 @@ public class MockKafkaConnect {
 
 
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i <= 10000; i++) {
+        for (int i = 0; i <= 100; i++) {
             String logTypeName = "tc50_biz_filebeat";
             String timestamp = DateUtil.getUTCTimeStr();
             String source = "/opt/20191231.log";
@@ -91,6 +96,16 @@ public class MockKafkaConnect {
             Map<String, String> normalFields = new HashMap<>();
             normalFields.put("message", "成功处理");
             normalFields.put("id", String.valueOf(i));
+
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("logTypeName", logTypeName);
+            jsonObject.put("timestamp", timestamp);
+            jsonObject.put("source", source);
+            jsonObject.put("offset", offset);
+            jsonObject.put("dimensions", dimensions);
+            jsonObject.put("measures", measures);
+            jsonObject.put("normalFields", normalFields);
+            System.out.println(jsonObject.toJSONString());
 
             AvroSerializer avroSerializer = AvroSerializerFactory.getLogAvorSerializer();
             byte[] bytes = avroSerializer.serializingLog(logTypeName, timestamp, source, offset, dimensions, measures, normalFields);
