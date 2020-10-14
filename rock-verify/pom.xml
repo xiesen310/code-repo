@@ -27,7 +27,7 @@
         <swagger2.version>2.9.2</swagger2.version>
         <commons.lang3.version>3.9</commons.lang3.version>
         <avro.version>1.7.7</avro.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
 
